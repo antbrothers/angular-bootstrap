@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("payAgreeControllers",[]);myControllers.controller("payAgreeCtrl",["$scope",function(o){console.log("支付协议")}]);

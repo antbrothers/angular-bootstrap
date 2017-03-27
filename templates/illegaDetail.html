@@ -1,0 +1,57 @@
+<!--2016.05.25 按需加载 资源 begin-->
+<!--<link rel="stylesheet" href="../css/illegaDetail.css"/>-->
+<!--2016.05.25 按需加载 资源 begin-->
+<header id="red_header">
+    <a href="#/home/illegaQuery">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">全国违章查询</div>
+</header>
+
+<div class="container-fluid" id="illegaDetail">
+    <div class="row comm_row" ng-repeat="dt in illeageArr">
+        <a href="#/home/illegaInfor/{{dt.date}}/{{dt.area}}/{{dt.act}}/{{dt.code}}/{{dt.fen}}/{{dt.money}}/{{dt.handled}}">
+             <div class="col-xs-12">
+            <div class="add" ng-bind="dt.area"></div>
+            <div class="row sec_row">
+                <div class="col-xs-8 date_time" ng-bind="dt.date">
+                </div>
+                <div class="col-xs-4">
+                    <div class="chuli_state wei_chuli" ng-if="dt.handled==0">未处理</div>
+                    <div class="chuli_state yi_chuli" ng-if="dt.handled==1">已处理</div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </div>
+   <!-- <div class="row comm_row">
+        <div class="col-xs-12">
+            <div class="add">国权东路105号</div>
+            <div class="row sec_row">
+                <div class="col-xs-8 date_time">
+                    2009-09-15 15:10:00
+                </div>
+                <div class="col-xs-4">
+                    <div class="chuli_state wei_chuli" >未处理</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row comm_row">
+        <div class="col-xs-12">
+            <div class="add">国权东路105号</div>
+            <div class="row sec_row">
+                <div class="col-xs-8 date_time">
+                    2009-09-15 15:10:00
+                </div>
+                <div class="col-xs-4">
+                    <div class="chuli_state wei_chuli" >未处理</div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>

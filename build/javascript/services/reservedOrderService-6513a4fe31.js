@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("payOrderServices",[]);myService.factory("payOrderService",["$http",function(r){return{getCarwashList:function(e,t,a){return r.get("/wx_share/Order/CarwashList/"+e+"/"+t+"/"+a)}}}]);

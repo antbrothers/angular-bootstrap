@@ -1,0 +1,1 @@
+var myController=angular.module("activeParkfailController",[]);myController.controller("activeParkfailCtrl",["$scope",function(l){}]);

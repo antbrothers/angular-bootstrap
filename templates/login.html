@@ -1,0 +1,42 @@
+<div id="loginFree">
+    <div class="row contain">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 cont_bord">
+            <div class="row comm_main">
+               <label>+86</label> <input ng-model="phone" placeholder="请输入手机号" name="phone" class="comm free_mobile" />
+                <button class="code_txt" ng-click="getCode(phone)">获取验证码</button>
+            </div>
+            <div class="line"></div>
+            <div class="row comm_main">
+                <input ng-model="code" placeholder="请输入短信验证码" name="code" class="comm code" />
+            </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    <div class="row btn_contain">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 login_main">
+            <button class="btn_login" ng-click="login(phone,code)">登录</button>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+
+
+    <!--<div class="row">
+        <div class="col-xs-12" style="text-align: right;padding-right: 33px;margin-top: 15px;">
+            <a href="javascript:void(0)" ng-click="zhuChe()" class="zhuce">注册 &gt;&gt;</a>
+        </div>
+    </div>-->
+
+
+    <!-- 弹出二维码 begin -->
+    <div id="qrCode">
+        <div class="qrMain">
+            <div>请长按二维码关注</div>
+            <img src="../images/推广单页.png">
+        </div>
+
+    </div>
+    <!-- 弹出二维码 end   -->
+
+</div>

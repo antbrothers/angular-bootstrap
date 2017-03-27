@@ -1,0 +1,1 @@
+var myControllers=angular.module("useAgreeController",[]);myControllers.controller("useAgreeCtrl",["$scope",function(o){console.log("用户协议")}]);

@@ -1,0 +1,65 @@
+<!-- 2016.5.25  按需加载资源 begin-->
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/cleanCar.css"/>-->
+<!-- 2016.5.25  按需加载资源 begin-->
+<header id="red_header">
+    <a href="#/home/carButler">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/addGasCard/back.png">
+            </div>
+        </div>
+    </a>
+
+    <div class="head_title">洗车</div>
+    <a href="#/home/orderRecord">
+       <div class="head_right_org">订单</div>
+    </a>
+</header>
+<div class="serverBrief">
+    <h1>服务简介</h1>
+
+    <p>洗车17元起，专业服务，保证质量，洗车17元起，专业服务，保证质量洗车17元起，专业服务，保证质量洗车17元起</p>
+</div>
+<div class="feeScale">
+    收费标准
+</div>
+<div class="scaleDetail">
+    <p>轿  车：服务费<s> <span> 1 </span> </s>元，现价<span> 1 </span>元 + 服务价格<span> 0 </span>元</p>
+
+    <p>商务车：服务费<s> <span> 1 </span> </s>元，现价<span> 1 </span>元 + 服务价格<span> 0 </span>元</p>
+    <ul>
+        <li><img src="../images/addGasCard/zeng.png">
+
+            <p>曾管家</p></li>
+        <li><img src="../images/addGasCard/zhang.png">
+
+            <p>张管家</p></li>
+        <li><img src="../images/addGasCard/zhang2.png">
+
+            <p>张管家</p></li>
+    </ul>
+    <button class="order">洗车下单</button>
+</div>
+<div class="serverExplain">
+    <h1>服务说明</h1>
+
+    <p>如果你有指定的管家，请通过电话告诉我们的工作人员，每间店家提供的服务内容有细微差异，实际服务内容请参照该保养门店的服务内容而定</p>
+</div>
+<script type="text/javascript">
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function () {
+        getFont();
+    }
+    function getFont() {
+        var screenWidth = oHtml.clientWidth;
+        if (screenWidth <= 320) {
+            oHtml.style.fontSize = '8px';
+        } else if (screenWidth >= 640) {
+            oHtml.style.fontSize = '23.7037px';
+        } else {
+            oHtml.style.fontSize = screenWidth / (1080 / 40) + 'px';
+        }
+    }
+</script>

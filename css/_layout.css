@@ -1,0 +1,334 @@
+#cnzz_stat_icon_1259748110{
+    display: none;
+}
+
+#red_header{
+    height: 44px;
+    width: 100%;
+    background-color:#3AD5B8;
+}
+#red_header .head_title{
+    width: 156px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+#red_header .ret_left{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#red_header .ret_left img{
+    width: 12px;
+}
+#red_header .ret_cont{
+    height: 44px;
+    width: 40px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+#red_header .ret_cont:active{
+    background: #4FAD9B;
+}
+#red_header .head_right_org{
+    width: 63px;
+    position: relative;
+    float: right;
+    margin: 0 auto;
+    text-align: center;
+    /* top: 50%; */
+    transform: translateY(-60%);
+    font-weight: bolder;
+    /* height: 19px; */
+    color: white;
+}
+/** a 去除默认的样式 **/
+a{
+    color: #333;
+}
+a:hover,a:focus{
+    text-decoration: none;
+}
+
+/** 错误弹出样式 begin **/
+#error_waring {
+    width: 100%;
+    position: absolute;
+    bottom: 108px;
+    -webkit-animation: zoomOut 3s ease both;
+    z-index: 999;
+
+}
+#error_waring .error_main{
+    position: relative;
+    background: grey;
+    width: 281px;
+    height: 50px;
+    margin:  0 auto;
+    border-radius: 27px;
+    text-align: center;
+}
+#error_waring .error_main .warning_text{
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+@-webkit-keyframes zoomOut {
+    0% {
+        opacity: 0;
+        /*-webkit-transform: scale(.6);*/
+    }
+    50% {
+        opacity: 1;
+        /*-webkit-transform: scale(1);*/
+    }
+    100%{
+        opacity: 0;
+       /* -webkit-transform: scale(.6);*/
+    }
+}
+/** 错误弹出样式 end **/
+
+/**  加载样式 begin **/
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+.load_js{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.load_js #Ant_load{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:10;
+    -moz-opacity: 0.8;
+    opacity: 0.50;
+    filter: alpha(opacity=80);
+}
+.load_js .load_main{
+    position: relative;
+    width: 62px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    height: 62px;
+    z-index: 11;
+    text-align: center;
+    background-color: #B9B9B9;
+}
+.load_js .load_content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.load_js .load_img{
+    text-align: center;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+.load_js .load_log{
+    width: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -31px;
+}
+.load_js .load_img img{
+    width: 50px;
+    -webkit-animation: loading 0.8s linear infinite;
+}
+/*@keyframes imgRote {
+    0%{ transform:rotate(0deg)}
+    20%{transform:rotate(72deg)}
+    40%{ transform:rotate(144deg) }
+    60%{ transform:rotate(216deg) }
+    80%{ transform:rotate(288deg) }
+    100%{ transform:rotate(360deg) }
+}*/
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loading {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+/**  加载样式 end   **/
+
+/** 服务简介弹出 样式 begin  **/
+#poppack .shown{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 110%;
+    background-color: black;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity: 0.20;
+    filter: alpha(opacity=80);
+}
+#poppack .pop_main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 11;
+    top: 0%;
+}
+#poppack .pop_cont{
+    position: relative;
+    width: 279px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    text-align: center;
+    padding: 17px;
+}
+#poppack .ion_close{
+    width: 18px;
+    float: right;
+}
+#poppack .pop_head{
+    border-bottom:1px solid #D8D7D7;
+    padding-bottom: 6px;
+}
+#poppack .desc_mioas{
+    text-align: left;
+}
+#poppack .middle_cont{
+    border-bottom: 1px solid #D8D7D7;
+    padding-bottom: 6px;
+    font-size: 14px;
+}
+#poppack .img-circle{
+    width: 49px;
+}
+
+
+#poppack .jianjie{
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+#poppack .code-btn{
+    padding: 6px 10px;
+    background: #fff;
+    color: #07cdd0;
+    border: 1px solid #07cdd0;
+    border-radius: 4px;
+    font-size: 17px;
+    /* z-index: 3; */
+    line-height: 67px;
+    /* right: -110px; */
+    letter-spacing: 1px;
+    /* margin-top: 17px; */
+}
+#poppack a:hover,a:focus{
+    text-decoration: none;
+}
+/** 服务弹出样式  end    **/
+
+
+/** 对话框弹出样式  begin  **/
+.dialog_box_content .row{
+  /*  padding-left: 0px;
+    padding-right: 0px;*/
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.dialog_box_content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.69);
+    top: 0%;
+}
+.dialog_box_content .dialog_main{
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    top: 50%;
+    background-color: white;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    text-align: center;
+}
+.dialog_box_content .dialog_close{
+    text-align: right;
+}
+.dialog_box_content .dialog_head_desc{
+    text-align: center;
+    color: rgb(58, 213, 184);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.dialog_box_content .dialog_status{
+    width: 160px;
+    margin: 0 auto;
+}
+.dialog_box_content .dialog_status_infor{
+    color: grey;
+}
+.dialog_box_content .dialog_tel{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+.dialog_box_content .dialog_btn{
+    border-top: 1px solid #C3C3C3;
+    text-align: center;
+    /*padding-top: 7px;
+    margin-top: 8px;*/
+}
+.dialog_box_content .dialog_btn .dialog_btn_right{
+    border-right: 1px solid #C3C3C3;
+}
+.dialog_box_content .dialog_btn_comm{
+    height: 40px;
+}
+.dialog_box_content .dialog_active{
+   /* transform: translateY(24%);*/
+    margin-top: 9px;
+}
+.dialog_box_content .dialog_check_order{
+    color: #3AD5B8;
+}
+/** 对话框弹出样式  end    **/
+
+

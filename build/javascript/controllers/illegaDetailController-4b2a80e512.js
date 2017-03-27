@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("illegaDetailController",[]);myControllers.controller("illegaDetailCtrl",["$scope","$stateParams","$rootScope",function(l,o,e){console.log("违章列表页面"),l.illeageArr=e.showIllegaData}]);

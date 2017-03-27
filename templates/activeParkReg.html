@@ -1,0 +1,21 @@
+<div class="activeParkPanel">
+    <form name="activeParkForm" novalidate>
+        <div class="activeParkInput_container">
+            <div class="activeParkInput_phone">
+                <input class="apInput" name="apPhone" ng-blur="checkMobileReg()" ng-maxlength="11" ng-model="activeParkVo.mobile"  placeholder="请输入手机号,领取优惠券" required/>
+                <button ng-class="{'apCheckCodeBtn':activeParkHelper.phoneUnSend == true, 'apCheckCodeSendBtn': activeParkHelper.phoneUnSend == false}"
+                        ng-click="sendCheckCode()"
+                        ng-disabled="(activeParkForm.apPhone.$error.required)">
+                    {{activeParkHelper.phoneText}}
+                </button>
+            </div>
+
+            <div class="activeParkInput_checkCode">
+                <input class="apInput" name="code" placeholder="请输入短信验证码" ng-model="activeParkVo.code" required/>
+                <button class="apGetCoupon" ng-click="registerActive()" ng-disabled="activeParkForm.$invalid">点击领取口袋停优惠券</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,30 @@
+body{
+    background-color: #F1EEEE;
+}
+
+#illegaDetail .comm_row{
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+#illegaDetail .add{
+    font-weight: bold;
+}
+#illegaDetail .date_time{
+    color:#A7A7A7;
+}
+#illegaDetail .chuli_state{
+ text-align: right;
+    font-weight: bold;
+}
+#illegaDetail .wei_chuli{
+    color: red;
+}
+#illegaDetail .yi_chuli{
+    color: #3AD5B8;
+}
+#illegaDetail .sec_row{
+    margin-top: 5px;
+}

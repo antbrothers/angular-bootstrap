@@ -1,0 +1,84 @@
+<div id="invitCred">
+    <div class="top_buf">
+        <div class="top_buf_head">
+
+            <!-- 显示凭证 begin -->
+            <div class="pz_y pz_dis" style="display: block">
+                <div class="top_buf_time" ng-bind="data.inviteDate"></div>
+                <div class="top_buf_sq">
+                    <img src="../images/invitLocal.png" class="invitLoal">
+                    <span ng-bind="data.parkingName"></span>
+                </div>
+            </div>
+            <!-- 显示凭证 end -->
+
+            <!-- 显示已过期的凭证 begin -->
+            <div class="pz_n pz_dis" style="display: none">
+                <img class="pz_n_img" src="../images/novalid.png">
+                <div class="pz_n_desc">
+                    拜访凭证已过期
+                </div>
+            </div>
+            <!-- 显示已过期的凭证 end -->
+
+        </div>
+    </div>
+    <div class="middle_bac">
+        <div class="middle_bac_img">
+            <div class="middle_main">
+                <!-- 输入车牌号 begin -->
+                <div class="pz_dis pz_xs_cp" style="display: none">
+                    <div>
+                        <span class="require_icon">&#10059</span>
+                        <span>填写车牌号</span>
+                    </div>
+                    <div class="car_number">
+                        <input ng-model="carnumber" class="car_number_inp" name="carnumber"/>
+                    </div>
+                    <div class="btn_main">
+                        <button class="btn" ng-click="tijcp(carnumber)">提交拜访车牌</button>
+                    </div>
+                </div>
+                <!-- 输入车牌号 end   -->
+
+                <!-- 显示凭证  begin  -->
+                <div  class="pz_dis pz_main" style="display: block">
+                    <div>
+                        <span class="pz_cont" >
+                            <span ng-bind="carNumberStr[0]"></span>
+                            <span style="color:#3AD5B8">&bull;</span>
+                            <span ng-bind="carNumberStr[1]"></span>
+                        </span>
+                    </div>
+                    <div class="pz_sj">
+                       <div>
+                           <span>入场时间:</span>
+                            <span ng-bind="dateIntime[1]"></span>
+                       </div>
+                        <div class="line_pad"></div>
+                        <div>
+                            <span>停留时间:</span>
+                            <span ng-bind="data.stayTime"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 显示凭证  end    -->
+
+                <!-- 过期凭证  begin -->
+                <div>
+                    <div class="pz_mian_desc pz_dis" style="display: none">
+                        如您想拜访我司服务的某小区，烦请您联系相关业主进行拜访邀约，谢谢！
+                    </div>
+                </div>
+                <!-- 过期凭证  end   -->
+
+            </div>
+        </div>
+        <div class="pz_tip pz_dis" style="display: block">
+            <div class="pz_head">收费标准:</div>
+            <div class="tip_cont" ng-bind="data.peacetimePrice"></div>
+        </div>
+    </div>
+    <div class="bottom_buf">
+    </div>
+</div>

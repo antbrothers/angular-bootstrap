@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("actThreeController",[]);myControllers.controller("actThreeCtrl",["$scope","$stateParams",function(r,o){console.log("活动3")}]);

@@ -1,0 +1,74 @@
+
+<!-- 2016.05.25 按需加载资源 beign -->
+<!--<link rel="stylesheet" href="../css/illegaQuery.css"/>
+<link rel="stylesheet" href="../css/LArea.css">-->
+<!-- 2016.05.25 按需加载资源 end -->
+<header id="red_header">
+    <a href="#/home/carButler">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">全国违章查询</div>
+</header>
+<div class="container-fluid" id="illegaQuery">
+    <div class="row">
+        <div class="col-lg-12">
+            <label class="illega_title">省、市:</label>
+            <div class="illega">
+                <input id="address" readonly="readonly" class="input-default" name="area" placeholder="请选择省市"/>
+                <input name="addressValue" id="addressValue" type="hidden" value="" ng-model="addressValue" />
+                <i> > </i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <label class="illega_title">车牌号码:</label>
+            <div class="illega">
+                <input ng-model="hphm" class="input-default" name="area" placeholder="请填写车辆车牌号"/>
+                <i> > </i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <label class="illega_title">发动机号码:</label>
+            <div class="illega">
+                <input ng-model="engineno" class="input-default engineno" name="area" placeholder="请输入发动机号后6位"/>
+                <i> > </i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <label class="illega_title">车架号码:</label>
+            <div class="illega">
+                <input ng-model="classno" class="input-default" name="area" placeholder="请输入车架号后6位"/>
+                <i> > </i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn_qued" ng-click="illegaSelect(hphm,engineno,classno)">确定</button>
+        </div>
+    </div>
+</div>
+<!--加载 begin -->
+<!--<div id="Ant_load"></div>
+<div class="load_main">
+    <div class="load_img">
+        <img src="../images/yuan1.png">
+    </div>
+    <div>
+        <img src="../images/active/logo.png" class="load_log">
+    </div>
+</div>-->
+<!--加载 end   -->
+<!-- 2016.05.25 按需加载资源 beign -->
+<!--<script src="../js/tool/LAreaData1.js"></script>
+<script src="../js/tool/LArea.js"></script>-->
+<!-- 2016.05.25 按需加载资源 end -->

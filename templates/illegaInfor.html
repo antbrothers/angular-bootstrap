@@ -1,0 +1,40 @@
+<!--2016.05.25 按需加载资源 begin-->
+<!--<link rel="stylesheet" href="../content/bootstrap.min.css"/>-->
+<!--<link rel="stylesheet" href="../css/illegaInfor.css"/>-->
+<!--2016.05.25 按需加载资源 begin-->
+<header id="red_header">
+    <a href="#/home/illegaDetail">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">全国违章查询</div>
+</header>
+<div class="container-fluid" id="illegaInfor">
+    <div class="row">
+        <div class="col-xs-4">违章日期:</div>
+        <div class="col-xs-8" ng-bind="data.date"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">违章城市:</div>
+        <div class="col-xs-8" ng-bind="data.area"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">违章地点:</div>
+        <div class="col-xs-8" ng-bind="data.area"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">违章行为:</div>
+        <div class="col-xs-8" ng-bind="data.act"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">违章扣分:</div>
+        <div class="col-xs-8" ng-bind="data.fen"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">违章罚款:</div>
+        <div class="col-xs-8" ng-bind="data.money"></div>
+    </div>
+</div>

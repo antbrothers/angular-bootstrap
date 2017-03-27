@@ -1,0 +1,43 @@
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" href="../content/bootstrap.min.css"/>
+<link rel="stylesheet" href="../css/register.css">-->
+<!-- 2016.05.25 按需加载资源 end -->
+<header id="red_header">
+    <!--<a href="#/home/carButler">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>-->
+    <div class="head_title">登录</div>
+</header>
+
+<div class="container-fluid" id="register">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="../images/phone.png" />
+            <!--<hr noshade width="1" size=1>-->
+            <hr size="100" width="1" color="blue">
+            <input ng-model="phone" type="text" name="phone" value="" class="inp_comm" placeholder="请输入手机号码"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <img src="../images/account.png">
+            <hr size="100" width="1" color="blue">
+            <input ng-model="psw" type="password" name="psw" value="" class="inp_comm" placeholder="请输入6-20位密码"/>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn_qued" ng-click="login(phone,psw)">登录</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <a class="mima" style="display: none">忘记密码?</a>
+    <a href="javascript:void(0)" ng-click="zhuChe()" class="zhuce">注册 >></a>
+</footer>

@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("orderRecordServices",[]);myService.factory("orderRecordService",["$http",function(r){return{getCarwashList:function(e,t,a){return r.get("/wx_share/Order/CarwashList/"+e+"/"+t+"/"+a)},cancelCarwashList:function(e,t){return r.get("/wx_share/Order/Cancel/"+e+"/"+t)}}}]);

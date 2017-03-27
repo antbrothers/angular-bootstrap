@@ -1,0 +1,31 @@
+section{
+    text-align:center;
+    padding: 0 30px 0 30px;
+    font-size: 18px;
+    position: relative;
+    background-color: #fcfcfc;
+}
+section input{
+    height: 3rem;
+    width:90%;
+    border: 1px solid #6ce0c7;
+    margin-bottom: 2rem;
+    padding: 5px;
+    text-indent:3em;
+    border-radius:0.5rem;
+}
+section input:nth-child(1){
+    background: url(../images/carButler/phone.png) no-repeat 18px center;
+}
+section input:nth-child(2){
+    background: url(../images/carButler/account.png) no-repeat 18px center;
+}
+section button{
+    width:80%;
+    height:3rem;
+    border-radius:0.5rem;
+    background-color: #6ce0c7;
+    margin:0 auto ;
+    font-size: 1rem;
+    color: #fff;
+}

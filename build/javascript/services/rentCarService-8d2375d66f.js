@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("rentCarServices",[]);myService.factory("rentCarServices",["$http",function(r){return{rentCar:function(){return r.get("/wx_share/Order/rentCar")}}}]);

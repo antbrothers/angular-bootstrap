@@ -1,0 +1,96 @@
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" href="../content/bootstrap.min.css"/>
+<link rel="stylesheet" href="../content/mobiscroll-2.13.2.full.min.css"/>
+<link rel="stylesheet" href="../css/replaceStop.css?V=0.0005">
+<script src="../scripts/mobiscroll-2.13.2.full.min.js"></script>-->
+<!-- 2016.05.25 按需加载资源 end -->
+
+<div id="replaceStop">
+    <ul class="list-group">
+        <li class="list-group-item" ng-click="selectReplacePark()">
+            <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+            代泊车场
+            <img src="../images/replaceStop/right.png" class="ion_right"/>
+            <span class="right_comm park_name" ng-bind="parkName"></span>
+
+        </li>
+        <li class="list-group-item">
+            <img class="replace_ion" src="../images/replaceStop/car_w.png"/>
+            车牌号码
+            <span class="right_comm">
+                <!--<input class="plate_num" value="" name="plateOne" size="1"/>
+                <input class="plate_num" value="" name="plateOne" size="1"/>
+                <span class="plate_cirle">
+                    ●
+                </span>
+                <input class="plate_num" value="" name="plateOne" size="1"/>
+                 <input class="plate_num" value="" name="plateOne" size="1"/>
+                 <input class="plate_num" value="" name="plateOne" size="1"/>
+                 <input class="plate_num" value="" name="plateOne" size="1"/>
+                 <input class="plate_num" value="" name="plateOne" size="1"/>-->
+                  <img src="../images/replaceStop/right.png" class="ion_right"/>
+                 <input ng-model="plate" class="inp_clear_comm" name="plate" placeholder="请输入车牌号"/>
+
+            </span>
+        </li>
+        <li class="list-group-item">
+            <img class="replace_ion" src="../images/replaceStop/take_t_w.png"/>
+            交易时间
+                <span class="right_comm">
+                    <span ng-bind="date.getHour"></span>
+                </span>
+        </li>
+        <li class="list-group-item">
+            <img class="replace_ion" src="../images/replaceStop/valet_t_w.png"/>
+            预计取车
+            <img src="../images/replaceStop/right.png" class="ion_right"/>
+                <span class="take_time">
+                    <input ng-model="takeTime" class="how_take_time" placeholder="您要几点取车"/>
+                </span>
+        </li>
+
+        <li class="list-group-item">
+            <div class="predict_price total_price">
+                预计费用<span class="price" ng-bind="price"></span>元
+            </div>
+            <div class="price_use total_price">
+                {{description}}
+            </div>
+        </li>
+
+    </ul>
+    <div class="row">
+        <div class="replace_desc">说明：</div>
+        <div class="col-xs-10 replace_cont">
+            你好！小P帮你泊车啦~
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn_replace_stop" ng-click="nowReplace()">立即下单</button>
+        </div>
+    </div>
+    <div class="empty_page" style="display:block; position: absolute;top: 0%;left: 0%;background: white;width: 100%;height: 100%;z-index: 1"></div>
+    <div class="processOrder" style="display:block; position: absolute;top: 0%;left: 0%;background: white;width: 100%;height: 100%;z-index: 1">
+       <div class="processMain" style="width: 150px; margin: 0 auto;top: 50%;transform: translateY(-50%);position: relative;-webkit-transform: translateY(-50%);">
+           <img style="width: 150px" src="../images/bg_pic_02.png">
+           <div style="color: #999999;font-size: 15px;margin-top: 17px;">代泊员正在未您下单...</div>
+       </div>
+    </div>
+
+    <!-- 停车场列表  begin -->
+    <div class="park_list" ng-show="parklist" ng-click="closeList()">
+        <div class="park_list_main">
+            <ul class="list-group">
+                <li class="list-group-item last_more">
+                    选择代泊车场
+                </li>
+                <li class="list-group-item" ng-repeat="parkArr in parkList" ng-click="selectPark(parkArr.parkingName,parkArr.parkingId)">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    {{parkArr.parkingName}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 停车场列表  end   -->
+</div>

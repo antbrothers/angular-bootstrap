@@ -1,0 +1,152 @@
+
+<div id="invit">
+    <ul class="list-group">
+        <li class="list-group-item" ng-click="selectReplacePark()">
+            <span class="require_icon">&#10059</span>
+            到访小区
+            <img src="../images/replaceStop/right.png" class="ion_right"/>
+            <span class="right_comm park_name" ng-bind="plot"></span>
+        </li>
+        <li class="list-group-item how_take_time">
+            <span class="require_icon">&#10059</span>
+            到访日期
+            <img src="../images/replaceStop/right.png" class="ion_right"/>
+                <span class="right_comm">
+                    <span  ng-bind="daoDate"></span>
+                </span>
+                <input style="display: none" ng-value="daoDate"  class="daofangriqi" name="date"  />
+        </li>
+        <li class="list-group-item">
+            <span class="require_icon require_comm"></span>
+            访客姓名
+            <span class="right_comm">
+                  <!--<img src="../images/replaceStop/right.png" class="ion_right"/>-->
+                 <input ng-model="name" class="inp_clear_comm" name="name" placeholder="请输入访客姓名"/>
+
+            </span>
+        </li>
+        <li class="list-group-item">
+            <span class="require_icon">&#10059</span>
+            访客手机号码
+            <span class="right_comm">
+                  <!--<img src="../images/replaceStop/right.png" class="ion_right"/>-->
+                 <input ng-model="moblile" class="inp_clear_comm" name="moblile" placeholder="请输入手机号码"/>
+
+            </span>
+        </li>
+        <li class="list-group-item">
+            <!--<span class="require_icon">&#10059</span>-->
+            <span class="require_icon require_comm"></span>
+            访客车牌号码
+            <span class="right_comm">
+                  <!--<img src="../images/replaceStop/right.png" class="ion_right"/>-->
+                 <input ng-model="carNumber" class="inp_clear_comm" name="carNumber" placeholder="请输入车牌号码"/>
+            </span>
+        </li>
+
+    </ul>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn_replace_stop" ng-click="sendDx()">发送邀请短信</button>
+        </div>
+    </div>
+    <div class="empty_page" style="display:none; position: absolute;top: 0%;left: 0%;background: white;width: 100%;height: 100%;z-index: 1"></div>
+    <!-- 小区列表  begin -->
+    <div class="park_list" ng-show="parklistShow" ng-click="closeList()">
+        <div class="park_list_main">
+            <ul class="list-group">
+                <li class="list-group-item last_more">
+                    选择小区
+                </li>
+                <li class="list-group-item" ng-repeat="parkArr in parkList" ng-click="selectPark(parkArr.parkingName,parkArr.parkingId)">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    {{parkArr.parkingName}}
+                </li>
+                <!--<li class="list-group-item" ng-click="selectPark('淮海路大厦停车场')">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>
+                <li class="list-group-item">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    恒积大厦停车场
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <!-- 小区列表  end   -->
+
+    <!-- 邀约车辆列表 begin -->
+    <div class="car_list">
+        <div class="no_car" style="display: none">
+            <div class="no_car_desc">您尚未进行任何车辆邀约</div>
+        </div>
+
+
+        <div class="has_data panel panel-default" ng-repeat="history in historyData">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <div class="xq" ng-bind="history.parkingName"></div>
+                    <div class="sj" ng-bind="history.createDate"></div>
+                </h3>
+                <div style="clear: both"></div>
+            </div>
+            <div class="panel-body">
+                <div class="yyrx">您邀约车辆如下:</div>
+                     <div class="car_number" ng-repeat="p in mySplit(history.carNumber) track by $index">
+                        <span>{{p}}</span>
+                     </div>
+                </div>
+            </div>
+
+        </div>
+        <!--<div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <div class="xq">太阳都市花园</div>
+                    <div class="sj">2016/09/01</div>
+                </h3>
+                <div style="clear: both"></div>
+            </div>
+            <div class="panel-body">
+                <div class="yyrx">您邀约车辆如下:</div>
+                <div class="car_number">
+                    沪A12345
+                </div>
+                <div class="car_number">
+                    沪A12345
+                </div>
+                <div class="car_number">
+                    沪A12345
+                </div>
+
+            </div>
+
+        </div>-->
+    </div>
+    <!-- 邀约车辆列表 end   -->
+
+</div>

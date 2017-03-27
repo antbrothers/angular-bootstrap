@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("registerServices",[]);myService.factory("registerService",["$http",function(e){return{getOpenId:function(r){return e.get("/wx_share/wxpay/getOpenId?code="+r)},register:function(r,t,n,s){return e.post("/wx_share/Register/postRegister/"+r+"/"+t+"/"+n+"/"+s)},getCode:function(r){return e.get("/wx_share/Register/sendSmsCode/"+r)}}}]);

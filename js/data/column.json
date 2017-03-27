@@ -1,0 +1,13 @@
+{
+  "errorNum": "0",
+  "errorInfo": "成功",
+  "data": {
+    "monthly":"5月份统计",
+    "monthtime":"2016.5.1-5.22",
+    "xAxis":[
+      "月租", "产权", "临停"
+    ],
+    "dayStatisticsMap":[120, 300, 500],
+    "factPrice":[100,150,300]
+  }
+}

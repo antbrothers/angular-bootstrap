@@ -1,0 +1,175 @@
+#parkPay{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+#parkPay .replace_ion{
+    width: 22px;
+}
+#parkPay .take_time{
+    float: right;
+    color: grey;
+}
+#parkPay .total_price{
+    text-align: right;
+}
+#parkPay .ion_right{
+    float: right;
+    width: 10px;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+#parkPay .right_comm{
+    float: right;
+}
+#parkPay .park_name{
+    font-weight: bold;
+}
+#parkPay .predict_price {
+    font-weight: bold;
+}
+#parkPay .price{
+    font-size: 19px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #39D5B8;
+}
+#parkPay .price_use{
+    font-size: 13px;
+}
+#parkPay .desc_price{
+    color: #39D5B8;
+}
+#parkPay .replace_desc{
+    float: left;
+    margin-left: 10px;
+}
+#parkPay .replace_cont{
+    padding-left: 0px;
+}
+#parkPay .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#parkPay .btn_replace_stop{
+    display: inline-block;
+    padding: 4px 2px;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+    color: white;
+    background-color: #3AD5B8;
+    letter-spacing: 2px;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 6px;
+}
+#parkPay .plate_num{
+    width: 25px;
+    margin: -3px;
+    outline: none;
+    border: 1px solid grey;
+}
+#parkPay .plate_cirle{
+    color: #3AD5B8;
+}
+#parkPay .how_take_time{
+    text-align: right;
+    border: none;
+    outline: none;
+}
+#parkPay .inp_clear_comm{
+    text-align: right;
+    border: none;
+    outline: none;
+}
+input {
+    -webkit-appearance: none;
+    border-radius: 0px;
+}
+
+
+
+
+
+#parkPay .park_list{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.63);
+    top: 0px;
+}
+#parkPay .park_list .park_list_main{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    bottom: 0px;
+    overflow-y: scroll;
+    margin-bottom: -19px;
+    background-color: white;
+}
+#parkPay .park_list .park_list_main .last_more{
+    text-align: center;
+}
+#parkPay #xieyi{
+    text-align: center;
+}
+#parkPay #xieyi .xieyi_ft{
+    font-size: 10px;
+}
+#parkPay #checkType{
+    text-align: center;
+}
+#parkPay .type_comm{
+    height: 32px;
+    width: 72px;
+    line-height: 30px;
+    border:1px solid #E5E5E5;
+    color: #333333;
+}
+#parkPay .typeCheck{
+    border: 2px solid #3AD5B8;
+}
+
+
+
+
+#parkPay .type_txt{
+  height: 0px;
+}
+#parkPay .type_img{
+    width: 11px;
+    margin-top: 11px;
+    margin-left: 54px;
+    opacity: 0;
+}
+#parkPay .text_comm{
+    letter-spacing: 1px;
+}
+#parkPay .list-group-item{
+    color: #696969;
+}
+#parkPay .xf_img{
+    width: 20px;
+}
+#parkPay .xf_inp{
+    width: 49px;
+    text-align: center;
+    border-bottom: 1px solid #DADADA;
+    margin-right: 14px;
+    margin-left: 14px;
+}

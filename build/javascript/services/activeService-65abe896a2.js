@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("activeServices",[]);myService.factory("activeService",["$http",function(e){return{postData:function(t,r,i,n,a,c,o,u,s,g){return e.get("/wx_share/share/postQuestionnaire/"+t+"/"+r+"/"+i+"/"+n+"/"+a+"/"+c+"/"+o+"/"+u+"/"+s+"/"+g)},getWxConfig:function(){return e.get("/wx_share/wxpay/getWxConfig")}}}]);

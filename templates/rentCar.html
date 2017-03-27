@@ -1,0 +1,57 @@
+
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/rentCar.css"/>-->
+<!-- 2016.05.25 按需加载资源 begin -->
+<header id="red_header">
+    <div class="ret_cont">
+        <div class="ret_left">
+            <img src="../images/addGasCard/back.png">
+        </div>
+    </div>
+    <div class="head_title">租车</div>
+</header>
+<div class="title1">
+    常规租车区
+</div>
+<div class="chooseCarType">
+    <p ng-bind="message.title"></p>
+    <ul class="carType">
+        <li ng-repeat="carArr in message.carList">
+            <img ng-src="{{carArr.imagePath}}">
+            <h1 ng-bind="carArr.name"></h1>
+            <h2><span ng-bind="carArr.price"></span>元起</h2>
+            <div class="call">
+                一键呼叫
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="title1">
+    新能源车租赁区
+</div>
+<div class="chooseCarType">
+    <p ng-bind="timeRent.title"></p>
+    <div class="timeCar" ng-repeat="newCarArr in timeRent.carList">
+        <img ng-src="{{newCarArr.imagePath}}">
+        <h3>每小时<span ng-bind="newCarArr.price"></span>元起</h3>
+        <div class="orderSelf">自助下单</div>
+    </div>
+</div>
+<script type="text/javascript">
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function () {
+        getFont();
+    }
+    function getFont() {
+        var screenWidth = oHtml.clientWidth;
+        if (screenWidth <= 320) {
+            oHtml.style.fontSize = '8px';
+        } else if (screenWidth >= 640) {
+            oHtml.style.fontSize = '23.7037px';
+        } else {
+            oHtml.style.fontSize = screenWidth / (1080 / 40) + 'px';
+        }
+    }
+</script>

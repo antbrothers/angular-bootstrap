@@ -1,0 +1,81 @@
+<div id="paySuccess">
+    <div class="success">
+        <img class="success_img" src="../images/pay_success.png">
+        <div class="success_txt">支付成功</div>
+    </div>
+    <div class="line"></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="badge" ng-bind="data.orderId"></span>
+            订单号
+        </li>
+        <li class="list-group-item">
+            <span class="badge" ng-bind="data.tradeNo"></span>
+            交易流水号
+        </li>
+        <li class="list-group-item">
+            <span class="badge"><span ng-bind="carNumberStr[0]"></span>-<span ng-bind="carNumberStr[1]"></span></span>
+            车牌号
+        </li>
+        <li class="list-group-item">
+            <span class="badge" ng-bind="data.orderTypeName"></span>
+           缴费类型
+        </li>
+        <li class="list-group-item" ng-show="lt">
+            <span class="badge"><span></span><span ng-bind="data.monthNum"></span>个月</span>
+            续费时长
+        </li>
+        <li class="list-group-item" ng-show="lt">
+            <span class="badge" ng-bind="data.effectEndDate"></span>
+            续费有效期
+        </li>
+
+        <li class="list-group-item" ng-show="ltCar">
+         <span class="badge" ng-bind="data.parkingName"></span>
+            小区名称
+        </li>
+        <li class="list-group-item" ng-show="ltCar">
+            <span class="badge" ng-bind="data.tempBeginTime"></span>
+            进场时间
+        </li>
+        <li class="list-group-item" ng-show="ltCar">
+            <span class="badge" ng-bind="data.tempEndTime"></span>
+            出场时间
+        </li>
+
+
+        <li class="list-group-item">
+            <span class="badge">微信支付</span>
+            付款方式
+        </li>
+        <li class="list-group-item">
+            <span class="badge"><span ng-bind="data.payTime"></span></span>
+            付款时间
+        </li>
+        <li class="list-group-item">
+            <span class="badge"><span ng-bind="data.amountDiscount"></span>元</span>
+            优惠金额
+        </li>
+        <li class="list-group-item">
+            <span class="badge"><span ng-bind="data.amountPaid"></span>元</span>
+            实付金额
+        </li>
+    </ul>
+    <div ng-show="Tip" style="color:#ff524e;">
+		<p style="text-align: center;">*请在15分钟内离场，超过时间将重新计费</p>
+	</div>
+    <div>
+        <div class="row btn_main">
+            <div class="col-xs-6">
+                <button class="btn_com btn_rt" ng-click="closePc()">
+                    立即关闭
+                </button>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn_com btn_look" ng-click="lookPz()">查看凭证</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

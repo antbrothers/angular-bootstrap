@@ -1,0 +1,5 @@
+var jsonUrl = {
+	"key":"Boxiang2016",
+	"carList":"http://www.p-share.com/share/app/temporary/carlist/",
+	"orderc":"http://www.p-share.com/share/app/order/orderc"
+}

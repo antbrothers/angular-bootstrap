@@ -1,0 +1,46 @@
+
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" href="../css/register.css">-->
+<!-- 2016.05.25 按需加载资源 end -->
+<header id="red_header">
+    <a href="#/home/login">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">注册</div>
+</header>
+
+<div class="container-fluid" id="register">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="../images/phone.png" />
+            <!--<hr noshade width="1" size=1>-->
+            <hr size="100" width="1" color="blue">
+            <input ng-model="phone" type="text" name="phone" value="" class="inp_comm" placeholder="请输入手机号码"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <img src="../images/account.png">
+            <hr size="100" width="1" color="blue">
+            <input ng-model="psw" type="password" name="psw" value="" class="inp_comm" placeholder="请输入6-20位密码"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input ng-model="phonecode" type="text" name="phone" value="" class="inp_comm_yanm" placeholder="请输入短信验证码"/>
+            <!--<span class="get_yanm" ng-click="getCode(phone)">获取验证码</span>-->
+            <button class="get_yanm" ng-click="getCode(phone)" value="获取验证码">获取验证码</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn_qued" ng-click="register(phone,psw,phonecode)">注册</button>
+        </div>
+    </div>
+</div>

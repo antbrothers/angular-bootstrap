@@ -1,0 +1,142 @@
+#invitCred{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#invitCred .top_buf{
+    width: 100%;
+    height: 40%;
+    background-color:#eeeeee;
+}
+#invitCred .bottom_buf{
+    width: 100%;
+    height: 60%;
+}
+#invitCred .top_buf_head{
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%);
+    text-align: center;
+
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform:translateY(-50%);
+}
+#invitCred .top_buf_time{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3AD5B8;
+    letter-spacing: 2px;
+}
+#invitCred .top_buf_sq{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+   /* margin-top: 18px;*/
+    padding-top: 17px;
+}
+#invitCred .invitLoal{
+    width: 13px;
+}
+#invitCred .middle_bac{
+    height: 40%;
+    width: 100%;
+    float: left;
+    transform: translateY(-40%);
+
+    -webkit-transform:translateY(-40%);
+    -moz-transform:translateY(-40%);
+    -o-transform: translateY(-40%);
+    -ms-transform:translateY(-40%);
+}
+#invitCred .middle_bac_img{
+    height: 100%;
+    width: 90%;
+    background: url("../images/middleBac.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#invitCred .middle_main{
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+}
+#invitCred .require_icon{
+    color:#3AD5B8;
+}
+#invitCred .car_number_inp{
+    outline: none;
+    border-radius: 3px;
+    border:1px solid #BBB8B8;
+    height: 29px;
+    margin-top: 22px;
+}
+#invitCred .btn{
+    outline: none;
+    width: 150px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #3AD5B8;
+    box-shadow: none;
+    margin-top: 23px;
+}
+
+.pz_cont{
+    border: 1px solid grey;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.pz_sj{
+    width: 163px;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: left;
+    color:#757575;
+}
+.line_pad{
+    margin: 10px;
+}
+.pz_main{
+    margin-top: 19px;
+}
+.pz_tip{
+    padding: 28px;
+    color: #757575;
+    font-size: 12px;
+}
+.tip_cont{
+    margin-left: 66px;
+}
+.pz_head{
+    float: left;
+}
+.pz_n_img{
+    width: 50px;
+    height: 40px;
+}
+.pz_n_desc{
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.pz_mian_desc{
+    padding: 39px;
+    font-weight: bolder;
+    line-height: 23px;
+    color: #9E9E9E;
+    letter-spacing: 1px;
+}

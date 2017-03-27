@@ -1,0 +1,21 @@
+.background {
+  position: absolute;
+  width: 16.0rem;
+  height: 28.4rem;
+  top: 0;
+  left: 50%;
+  margin-left: -8rem;
+  background: url(../../images/activePark/activeUser_bg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.background .qrCode {
+  width: 5.15rem;
+  height: 5.15rem;
+  margin: auto;
+  margin-top: 17.0rem;
+}
+.background .qrCode img {
+  width: 100%;
+  height: 100%;
+}

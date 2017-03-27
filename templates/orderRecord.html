@@ -1,0 +1,68 @@
+<!-- 2016.05.25  按需加载资源 beign -->
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/orderRecord.css"/>-->
+<!-- 2016.05.25  按需加载资源 end -->
+<header id="red_header">
+    <a href="#/home/cleanCar">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/addGasCard/back.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">订单记录</div>
+</header>
+<div class="payStatius">
+    <ul>
+        <li class="noPay comm_pay" ng-click="noPrice('no_pay')">待付款</li>
+        <li class="pay comm_pay" ng-click="donePrice('done_pay')">已付款</li>
+    </ul>
+</div>
+<ul class="washOrderformList no_pay">
+    <li class="washOrderform" ng-repeat="carwash in carwashList">
+        <div class="washForm">
+            <h1>恒积大厦</h1>
+            <p>预约时间：<span ng-bind="carwash.reserveDate"></span></p>
+            <p>订单金额：<span ng-bind="carwash.amountPaid"></span>元</p>
+            <p>订单生成时间：<span ng-bind="carwash.createDate"></span></p>
+        </div>
+        <div class="decide">
+            <div class="sure">付款</div>
+            <div class="cancel" ng-click="cancelOrder(carwash.orderId, carwash.orderStatus)">取消</div>
+        </div>
+    </li>
+</ul>
+<ol class="washOrderformList done_pay" style="display: none;">
+    <li class="washOrderform" ng-repeat="carwashDone in carwashListDone">
+        <div class="washForm">
+            <h1 ng-bind="carwashDone.parkingName"></h1>
+            <p>服务项目：<span>洗车</span></p>
+            <p>预约时间：<span ng-bind="carwashDone.reserveDate"></span></p>
+            <p>付款时间：<span ng-bind="carwashDone.payTime"></span></p>
+            <p class="payMoney">已付款：<span ng-bind="carwashDone.amountPaid"></span>元</p>
+        </div>
+    </li>
+</ol>
+<script type="text/javascript">
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function () {
+        getFont();
+    }
+    function getFont() {
+        var screenWidth = oHtml.clientWidth;
+        if (screenWidth <= 320) {
+            oHtml.style.fontSize = '8px';
+        } else if (screenWidth >= 640) {
+            oHtml.style.fontSize = '23.7037px';
+        } else {
+            oHtml.style.fontSize = screenWidth / (1080 / 40) + 'px';
+        }
+    }
+   /* $(".payStatius ul li").click(function () {
+        if ($(this).has(".current")) {
+            $(this).addClass("current").siblings().removeClass("current");
+        }
+    })*/
+</script>
+

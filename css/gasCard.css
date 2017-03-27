@@ -1,0 +1,78 @@
+.addcard{width:95%;
+		height:7.25rem;
+		border: solid 1px #bfbfbf;
+		background-color: #FFF;
+		margin: 0 auto;
+		border-radius: 0.5rem 0.5rem 0 0;
+		text-align: center;
+		line-height: 7.25rem;
+		font-size: 1rem;
+		font-weight:bold;
+		color:#151b1a;
+		word-spacing:1rem;
+		letter-spacing:0.125rem;
+		margin-top:10px;
+		}
+.addcard img{
+				width: 1rem;
+				height: 1rem;
+				}
+.rechargemoney{width:95%;
+				/*height:11rem;*/
+				border: solid 1px #bfbfbf;
+				background-color: #FFF;
+				margin: 0 auto;
+				margin-top:2.25rem;
+				padding:1rem 0.5rem;
+				box-sizing: border-box;
+				}
+.rechargemoney h1{margin-bottom: 1rem;
+				font-size:1rem;
+				font-weight:bold;}
+.rechargemoney ul.amount{overflow: hidden;
+						zoom: 1;
+						width: 100%;
+						height:2rem;}
+.rechargemoney ul.amount li{float: left;
+							border: solid 1px #bfbfbf;
+							width:30%;
+							height:2rem;
+							line-height: 2rem;
+							text-align: center;
+							font-size:1rem;}
+.rechargemoney ul.amount li:nth-child(2){margin:0 5%}
+.rechargemoney ul.amount .current{
+	background:url("../images/addGasCard/sanjiao.png" ) right bottom no-repeat;
+	background-size: 1rem;
+}
+.rechargemoney p{font-size:1rem;
+				margin: 0.5rem auto 0;
+				font-weight:bold;
+				color: #696969;}
+.rechargemoney input{width:100%;
+					height:2rem;
+					border: solid 1px #bfbfbf;
+					text-indent: 1rem;
+					margin:0.5rem auto;
+					font-size:0.875rem;
+					color:#aaaaaa;
+					font-weight:bold;
+					outline:none;}
+.paybtn{width:95%;
+		height:2.25rem;
+		margin: 0 auto;
+		display: block;
+		background-color: #39d5b7;
+		text-align: center;
+		font-size:1.25rem;
+		font-weight: bold;
+		color:#FFF;
+		margin:1.75rem auto;
+		border-radius:0.3rem;}
+.explain{width: 95%;
+		margin: 0 auto;
+		margin: 5px auto;}
+.explain h2{padding:10px 0;
+			font-size:1rem;}
+.explain p{font-size: 0.8rem;}
+

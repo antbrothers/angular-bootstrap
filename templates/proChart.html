@@ -1,0 +1,91 @@
+<div class="panel panel-default" id="pro_chart_ys">
+    <div class="panel-body">
+        <div class="pro_car_head" ng-click="openCarStop()">
+           <span ng-bind="carStop"></span>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-9 panel_comm">
+                <div class="panel_plate">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input class="chart_plate"  name="plate" placeholder="请输入车牌"/>
+                </div>
+
+            </div>
+            <div class="col-xs-3 panel_comm panel_ls">
+                <button>临时放行</button>
+            </div>
+        </div>-->
+        <div class="pro_car_cont" style="display: none">
+            <div class="pro_car_list_shown" ng-click="closeCarlist()">
+                <div class="pro_car_list">
+                    <div ng-repeat="carArr in carList">
+                        <div ng-click="selectCar(carArr.parkingName,carArr.parkingId)" ng-bind="carArr.parkingName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 月份 begin -->
+        <div id="wrapper">
+            <div id="scroller">
+                <ul>
+                    <div ng-repeat="monthStr in mouthArr">
+                        <div ng-if="monthStr.m == mouth">
+                            <li class="active"  ng-attr-dataVuel="{{monthStr.m}}"  ng-click="selectMouth($event,monthStr.y,monthStr.m)"><span ng-bind="monthStr.m"></span>月</li>
+                        </div>
+                        <div ng-if="monthStr.m != mouth">
+                            <li  ng-attr-dataVuel="{{monthStr.m}}"  ng-click="selectMouth($event,monthStr.y,monthStr.m)"><span ng-bind="monthStr.m"></span>月</li>
+                        </div>
+
+                    </div>
+                    <!--<li dataVuel="12"  ng-click="selectMouth($event,'12')">12月</li>
+                    <li dataVuel="11" ng-click="selectMouth($event,'11')">11月</li>
+                    <li dataVuel="10" ng-click="selectMouth($event,'10')">10月</li>
+                    <li dataVuel="9" ng-click="selectMouth($event,'9')">9月</li>
+                    <li dataVuel="8" ng-click="selectMouth($event,'8')">8月</li>
+                    <li dataVuel="7" ng-click="selectMouth($event,'7')">7月</li>
+                    <li dataVuel="6" ng-click="selectMouth($event,'6')">6月</li>
+                    <li dataVuel="5" ng-click="selectMouth($event,'5')">5月</li>
+                    <li dataVuel="4" ng-click="selectMouth($event,'4')">4月</li>
+                    <li dataVuel="3" ng-click="selectMouth($event,'3')">3月</li>
+                    <li dataVuel="2" ng-click="selectMouth($event,'2')">2月</li>
+                    <li dataVuel="1" ng-click="selectMouth($event,'1')">1月</li>-->
+            </ul>
+            </div>
+        </div>
+        <!-- 月份 end   -->
+    </div>
+</div>
+<div class="chart_cont">
+    <!-- 柱状图 begin -->
+    <div class="panel panel-default">
+        <div class="panel-heading panel_head">
+            <h3 class="panel-title">
+                <span ng-bind="monthly"></span>
+                <span class="panel_price" ng-bind="monthtime">
+                </span>
+            </h3>
+
+        </div>
+        <div class="panel-body" id="column_main">
+            <div id="column_container" style="height: 250px"></div>
+        </div>
+    </div>
+    <!-- 状状图 end -->
+    <!-- 折线图 beign -->
+    <div class="panel panel-default">
+        <div class="panel-heading panel_head">
+            <h3 class="panel-title">
+                <span ng-bind="weekDesc"></span>
+                <span class="panel_price" ng-bind="weekDate">
+                </span>
+            </h3>
+
+        </div>
+        <div class="panel-body">
+            <div id="line_container" style="height: 250px"></div>
+        </div>
+    </div>
+    <!-- 折线图 end -->
+
+</div>

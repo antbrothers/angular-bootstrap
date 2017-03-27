@@ -1,0 +1,1 @@
+var myController=angular.module("payNumberController",[]);myController.controller("payNumberCtrl",["$scope",function(o){console.log("公众号页面")}]);

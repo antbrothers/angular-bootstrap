@@ -1,0 +1,1 @@
+var myController=angular.module("actOverController",[]);myController.controller("actOverCtrl",["$scope",function(o){console.log("�����ҳ��")}]);

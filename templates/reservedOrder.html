@@ -1,0 +1,58 @@
+<div id="payOrder">
+    <div class="head_bac"></div>
+    <div class="back_img">
+        <div class="head_title" ng-bind="data.parkingName"></div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="pay_title">停车凭证</div>
+                <span class="pay_desc">车牌号</span>
+                <div class="pay_comm" ng-bind="data.carNumber"></div>
+                <div class="state_img" ng-if="data.voucherStatus=='0'">
+                    <img class="useImg" src="../images/unused_a.png">
+                </div>
+                <div class="state_img" ng-if="data.voucherStatus=='1'">
+                    <img class="useImg" src="../images/alreadyused.png">
+                </div>
+                <div class="state_img" ng-if="data.voucherStatus=='2'">
+                    <img class="useImg" src="../images/expired.png">
+                </div>
+            </li>
+            <li class="list-group-item">
+
+                <span class="pay_desc">优惠停车时间</span>
+                <div class="pay_comm" ng-repeat=" dt in data.reserveTimeStr" style="font-size: 14px">
+                    {{dt}}
+                </div>
+
+            </li>
+            <li class="list-group-item" ng-show="lt">
+                <span class="badge">续费时长</span>
+                <span class="pay_desc">续费到期时间</span>
+                <div class="pay_comm">
+                    <span class="pay_r" ng-bind="data.effectEndDate"></span>
+                    <span class="pay_l"><span ng-bind="data.monthNum">1</span><span>个月</span></span>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <span class="pay_desc">停车码</span>
+                <div class="pay_comm">
+                    <span ng-bind="data.parkingCode"></span>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <!--<span class="pay_desc">停车码</span>-->
+                <div class="pay_comm">
+                 <!--   <span ng-bind="data.parkingCode"></span>-->
+                    <div id="code" style="width: 7rem;margin: 0 auto"></div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <!--<span class="pay_desc">停车码</span>-->
+                <div class="pay_comm">
+                    <!--   <span ng-bind="data.parkingCode"></span>-->
+                    <div id="barcodeTarget" style="width: 12.5rem;margin: 0 auto"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

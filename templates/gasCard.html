@@ -1,0 +1,60 @@
+<!--2016.5.25 按需加载资源 begin-->
+
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/gasCard.css"/>-->
+<!--2016.5.25 按需加载资源 end-->
+
+<header id="red_header">
+    <a href="#/home/carButler">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/carButler/return.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">加油卡充值</div>
+    <div class="head_right_org">订单</div>
+</header>
+<a href="#/home/addCarType">
+<div class="addcard">
+	<img src="../images/addGasCard/add.png"/>
+	添加加油卡
+</div>
+</a>
+<section class="rechargemoney">
+	<h1>充值金额</h1>
+	<ul class="amount">
+		<li class="current">100元</li>
+		<li>500元</li>
+		<li>1000元</li>
+	</ul>
+	<p>*选择定额充值不提供发票</p>
+	<input type="text" placeholder="请输入充值金额"/>
+	<p>*选择任意金额充值发票请于加油站领取</p>
+</section>
+<button class="paybtn">支付<span>100</span>元</button>
+<div class="explain">
+	<h2>充值说明</h2>
+	<p>选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取选择任意金额充值发票请于加油站领取</p>
+</div>
+<script type="text/javascript">
+        var oHtml = document.documentElement;
+        getFont();
+        window.onresize = function(){
+        	getFont();
+        }  
+        function getFont(){
+        	var screenWidth = oHtml.clientWidth;
+            if(screenWidth <= 320){
+                oHtml.style.fontSize = '8px';
+            }else if(screenWidth >= 640){
+                oHtml.style.fontSize = '23.7037px';
+            }else{
+                oHtml.style.fontSize = screenWidth/(1080/40)+'px';
+            }  	
+        }
+ </script>
+<!-- 2016.05.25 按需加载静态资源 begin-->
+<!--<script src="../js/tool/gasCard.js"></script>-->
+<!-- 2016.05.25 按需加载静态资源 end-->
+

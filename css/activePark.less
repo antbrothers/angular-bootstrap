@@ -1,0 +1,87 @@
+.activeParkPanel{
+  width: 16.0rem;
+  height: 28.4rem;
+  background: url("../../images/activePark/activeRegister_bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  .activeParkInput_container{
+    margin-top: 16.9rem;
+    text-align: center;
+    position: relative;
+    .apCheckCodeBtn{
+      position: absolute;
+      border: 1px solid #42baa3;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      background-color: white;
+      top: 2.5px;
+      right: 4px;
+      height: 30px;
+      color: #9fa0a0;
+    }
+    .apCheckCodeSendBtn{
+      .apCheckCodeBtn();
+      background-color: #CBC9C9;
+      color: white;
+      border: 1px solid #CBC9C9;
+    }
+    .activeParkInput_phone{
+      width: 13rem;
+      margin: auto;
+      position: relative;
+    }
+    .activeParkInput_checkCode{
+      width: 13rem;
+      margin: auto;
+      margin-top: 0.5rem;
+      .apGetCoupon{
+        margin-top: 0.5rem;
+        background-color: #f39800;
+        .apInput();
+        color: white;
+      }
+    }
+  }
+}
+
+.apInput{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #45b6a1;
+  height: 35px;
+  width: 100%;
+  padding: 0 10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.apsPanel{
+  background: url("../../images/activePark/activeParkSuc_bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 16.0rem;
+  height: 28.4rem;
+  position: absolute;
+  .apsContainer{
+    margin: auto;
+    text-align: center;
+    margin-top: 9rem;
+    color: white;
+    width: 80%;
+    >label{
+      font-size: 10px;
+    }
+    .apGetCoupon{
+      background-color: #f39800;
+      .apInput();
+      color: white;
+      border: 1px solid #f39800;
+      display: inline-block;
+      line-height: 35px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("illegaQueryServices",[]);myService.factory("illegaQuery",["$http",function(e){return{getIllegaData:function(n,t,r,c){return e.jsonp("http://v.juhe.cn/wz/query?dtype=jsonp&callback=JSON_CALLBACK&city="+n+"&hphm="+encodeURI(t)+"&hpzl=02&engineno="+r+"&classno="+c+"&key=909110fd7305195902079f9e48057e42")}}}]);

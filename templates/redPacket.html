@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="../css/redPacket.css"/>
+<style type="text/css">
+    .red_init_main a{color: white;text-decoration: initial;}
+</style>
+<div class="container-fluid">
+    <div class="red_m_back">
+        <div class="red_log">
+            <img src="../images/active/logo.png"/>
+        </div>
+        <div class="red_duihm">
+            <p class="red_type">红包兑换码</p>
+
+            <p class="red_ma">{{code}}</p>
+
+            <p class="red_caoz">(长按复制)</p>
+        </div>
+    </div>
+    <div class="red_init_main">
+        <p class="main_jiazhi">
+            价值<span class="price">100</span>元
+        </p>
+
+        <p class="desc">含停车代金券、洗车代金券等多种好礼！</p>
+
+        <p class="jianli_desc">所有奖励请在 口袋停app</p>
+
+        <p class="use_fa">
+            <span class="user_luj"> “我的钱包”，“我的优惠券” </span> 中使用
+        </p>
+
+        <!-- 微信端 begin -->
+        	<a href="#" class="wx_pos" onclick="justPOS()" style="display: none;">
+		        <div class="btn_down btn_kehuxiaz">
+		          <!-- 	<a href="#"  onclick="justPOS()"> -->
+		            	<img src="../images/active/button.png"/>          
+		                <p class="down_desc">下载客户端</p>
+		           <!--  </a> -->
+		        </div>
+        	 </a>
+        <!-- 微信端 end   -->
+
+        <!-- 浏览器端以及app端 begin  -->
+          <a href="https://itunes.apple.com/cn/app/kou-dai-ting/id1049233050?mt=8" class="fei_wx_ios" style="display: none;">
+	        <div class="btn_down btn_kehuxiaz">
+	       <!--   <a href="https://itunes.apple.com/cn/app/kou-dai-ting/id1049233050?mt=8"> -->
+	            	<img src="../images/active/button.png"/>           
+	                <p class="down_desc">下载客户端</p>
+	           <!--  </a> -->
+	        </div>
+         </a>
+          <a class="fei_wx_android" href="../../other/html5/口袋停1.3.5.apk" style="display: none;">
+	        <div class="btn_down btn_kehuxiaz" >
+	            <!--  <a href="../other/html5/口袋停1.3.5.apk"> -->
+	            	<img src="../images/active/button.png"/>            
+	                <p class="down_desc">下载客户端</p>
+	          <!--   </a> -->
+	        </div>
+          </a>
+        <!-- 浏览器端以及app端 end    -->
+
+
+    </div>
+</div>
+
+<script src="../js/redPacket.js"></script>
+<script>
+    //判断是否在微信内嵌的浏览器里
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger' || ua.match(/WeiBo/i) == "weibo") {
+        $(".wx_pos").css("display",'block');
+    }else{
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent,
+                        app = navigator.appVersion,
+                        ua = navigator.userAgent.toLowerCase();;
+                return {//移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    /* || u.indexOf('Linux') > -1*/
+                    android: u.indexOf('Android') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1,  //是否web应该程序，没有头部与底部
+                    wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+                    weibo:ua.match(/WeiBo/i) == "weibo",//微博
+                    qq:ua.match(/QQ/i) == "qq"          //qq
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+            $(".fei_wx_ios").css("display",'block');
+        }else if(browser.versions.android){
+            $(".fei_wx_android").css("display",'block');
+        }
+
+    }
+    function justPOS(){
+        layer.open({
+            content: '下载口袋停，请点击右上角选择[在浏览器中打开]',
+            btn: ['确认']
+        });
+    }
+
+</script>

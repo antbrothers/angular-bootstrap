@@ -1,0 +1,37 @@
+<div id="payOrder">
+    <div class="head_bac"></div>
+    <div class="back_img">
+        <div class="head_title" ng-bind="data.parkingName"></div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="pay_title"><span ng-bind="data.orderTypeName"></span>支付凭证</div>
+                <span class="pay_desc">付款时间</span>
+                <div class="pay_comm" ng-bind="data.payTime">
+                </div>
+                <div class="state_img">
+                    <img class="useImg" src="../images/paida.png">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <span class="pay_desc">车牌号</span>
+                <div class="pay_comm" ng-bind="data.carNumber">
+
+                </div>
+            </li>
+            <li class="list-group-item" ng-show="lt">
+                <span class="badge">续费时长</span>
+               <span class="pay_desc">续费到期时间</span>
+                <div class="pay_comm">
+                    <span class="pay_r" ng-bind="data.effectEndDate"></span>
+                    <span class="pay_l"><span ng-bind="data.monthNum">1</span><span>个月</span></span>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <span class="pay_desc">支付金额</span>
+                <div class="pay_comm">
+                   <span ng-bind="data.amountPaid"></span>元
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

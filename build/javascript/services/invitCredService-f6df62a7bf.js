@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("invitCredServices",[]);myService.factory("invitCredService",["$http",function(e){return{queryById:function(t){return e.get("/wx_share/invitation/queryById/"+t)},update:function(t,r){return e.get("/wx_share/invitation/update/"+t+"/"+r)}}}]);

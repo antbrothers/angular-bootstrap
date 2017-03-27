@@ -1,0 +1,333 @@
+body {
+    background-color: #eeeeee;
+}
+header {
+    width: 100%;
+    height: 10%;
+    /*background-color: #37b69d;*/
+    text-align: center;
+    border-bottom: solid 1px #37b69d;
+    color:#000;
+}
+
+.logo21 {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+    margin: 6% auto;
+}
+
+.back:before {
+    width: 26px;
+    height: 45px;
+    background: url(../images/back.png) 0 0 no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*.inp_contain{
+	width: 100%;
+}*/
+.inp_contain .inp_main{
+			width: 300px;
+           /* margin: 0 auto; 
+            position: relative; 
+            top: 50%; 
+            transform: translateY(-50%);*/
+          height: 38px;
+          margin: 0 auto;
+}
+.zhangdan {
+    font-size:45px;
+    color: #fcfcfc;
+    padding-top: 25px;
+    /* line-height: 44px; */
+    padding-bottom: 25px;
+    display: inline-block;
+    color:#333333;
+}
+
+.center {
+	
+width: 300px;
+    height: 55px;
+ 
+    margin: 0 auto;
+    position: relative;
+    /*top: 50%;*/
+   /* transform: translateY(-50%);*/
+    
+    
+    
+     background: url(../images/search.png) 7px 10px no-repeat #FFF;
+    background-size:16px 16px;
+    height: 35px;
+     display: inline-block;
+    border: 1px solid #bfbfbf;
+     border-radius: 5px;
+    text-indent:30px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 35px;
+     outline: none;
+    /*display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 35px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    text-indent:30px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 35px;
+    background: url(../images/search.png) 7px 10px no-repeat #FFF;
+    background-size:16px 16px;
+    outline: none;
+*/
+}
+::-moz-placeholder { color: #aaaaaa; }
+::-webkit-input-placeholder { color:#aaaaaa; }
+:-ms-input-placeholder { color:#aaaaaa; }
+
+.center:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../images/search.png) 0 0 no-repeat;
+    -webkit-background-size: 46px 46px;
+    background-size: 46px 46px;
+}
+
+.explain {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 32px;
+    color: #919191;
+    margin: 30px auto;
+}
+
+.explain strong {
+    font-size: 40px;
+}
+
+.chooseList {
+    font-size:15px;
+    color: #696969;
+    text-indent: 5%;
+    margin-top:12px;
+    margin-bottom: 12px;
+    /*font-weight: bold;*/
+}
+.selectList {
+    width: 90%;
+    margin: 0 auto;
+    /*position:relative;*/
+    z-index:10;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.selectList li {
+    float: left;
+    width: 30%;
+    height: 26px;
+    line-height: 26px;
+    border: #bfbfbf solid 1px;
+    background-color: #FFF;
+    margin:0 auto 12px;
+    color:#333333;
+    font-size: 15px;
+    text-align: center;
+    /*padding: 5px;*/
+    box-sizing: border-box;
+}
+
+.selectList li.current {
+    background: #FFF url(../images/sanjiao.png) right bottom no-repeat;
+    background-size: 10px 10px;
+}
+
+.selectList li:nth-child(2) {
+    margin:0 5% 12px;
+}
+
+button {
+    width: 130px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #38cbae;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto 12px;
+    color: #fcfcfc;
+    display: block;
+}
+
+hr {
+    width: 90%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 3px;
+    margin-top:15px;
+}
+
+.fukuandan {
+    text-indent: 2em;
+    font-size: 15px;
+    color: #696969;
+    font-weight: normal;
+}
+
+.fukuandan span {
+    color: #78c6b5;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.section {
+    width: 90%;
+    /*height: 470px;*/
+    border-top: 2px solid #1cd8aa;
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 15px 5px;
+    box-sizing: border-box;
+}
+
+.chepai {
+    height: 20px;
+}
+.left,.right {
+    font-size: 16px;
+    display: inline-block;
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+.time {
+    font-size: 16px;
+    color: #696969;
+    display: inline-block;
+}
+.time span {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+.detail {
+    overflow: hidden;
+    zoom: 1;
+}
+.detail li {
+    float: left;
+    width: 49%;
+    height: 60px;
+}
+.detail li span {
+    display: block;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 1em;
+}
+.detail li .times {
+    color: #37b69d;
+    font-size: 16px;
+    line-height:30px;
+    text-align: center;
+}
+.detail li .pays {
+    color: #f39800;
+    font-size: 16px;
+    line-height:30px;
+    text-align: center;
+}
+.detail li .pays span {
+    display: inline-block;
+    color: #333333;
+}
+.detail li.parktime {
+    border-right: #bbbbbb solid 1px;
+}
+button.paynow {
+    width: 150px;
+    heigh: 40px;
+    background-color: #38cbae;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fcfcfc;
+    margin: 10px auto 0;
+}
+.btn_cont {
+    width: 100%;
+    margin: 0 auto;
+}
+.temp_tangc{
+    display: none;
+}
+#tangchu{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity: 0.50;
+    filter: alpha(opacity=80);
+}
+.tanchu_main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.tangchu_content{
+    position: relative;
+    width: 250px;
+    text-align: center;
+    z-index: 11;
+    margin: 0 auto;
+    border: 1px solid grey;
+    top: 50%;
+    transform: translateY(-80%);
+    background-color: white;
+    border-radius: 5px;
+    /*font-weight: bold;*/
+}
+.tangc_desc{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 3px;
+}
+.tangc_close{
+    font-size: 15px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #39d5b8;
+}
+/**������ʾ�� end**/

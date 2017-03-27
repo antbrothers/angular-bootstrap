@@ -1,0 +1,38 @@
+<!-- 2016.05.25 按需加载资源 begin -->
+
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/orderAssess.css"/>-->
+<!-- 2016.05.25 按需加载资源 end -->
+<div class="orderAssess">
+    <form>
+        <h1>请对代泊员进行评价!</h1><br />
+        <div class="radioList">
+            <ul>
+                <li><input type="radio" ng-model="radio" ng-checked="true" name="1" id="a" value="1" class="radio" ><label for="a" class="radio">很好</label></li>
+                <li><input type="radio" ng-model="radio"  name="2" id="b" value="2" class="radio"><label for="b" class="radio" > 好</li>
+                <li><input type="radio" ng-model="radio"  name="3" id="c" value="3" class="radio"><label for="c" class="radio" >一般</label></li>
+            </ul>
+        </div>
+        <textarea ng-model="content" name="content" placeholder="请输入评价描述" class="content"></textarea>
+        <button ng-click="submitAssess(radio,content)">确定</button>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function(){
+        getFont();
+    }
+    function getFont(){
+        var screenWidth = oHtml.clientWidth;
+        if(screenWidth <= 320){
+            oHtml.style.fontSize = '8px';
+        }else if(screenWidth >= 640){
+            oHtml.style.fontSize = '23.7037px';
+        }else{
+            oHtml.style.fontSize = screenWidth/(1080/40)+'px';
+        }
+    }
+</script>

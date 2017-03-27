@@ -1,0 +1,61 @@
+
+    #actSeven{
+        height: 637px;
+    }
+#actSeven .act_bac{
+    background-image: url('../images/active/7_bgc.png');
+    background-repeat:no-repeat;
+    height: 100%;
+    background-size: cover;
+   /* -moz-background-size:100% 100%;
+    background-size:100% 100%;*/
+}
+#actSeven .head_title{
+    text-align: center;
+    margin-top: 58px;
+    font-weight: bolder;
+    margin-left: 42px;
+    font-size: 13px;
+}
+#actSeven .cont{
+    margin-top: 30px;
+}
+#actSeven .cont img{
+    width:100%;
+
+}
+#actSeven .cont_dt .row{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#actSeven .cont_dt{
+    margin-top: 26px;
+}
+#actSeven .txt_bord{
+    background: url("../images/active/7_txtbBgc.png") no-repeat;
+    height: 75px;
+    padding: -35px;
+    margin: 15px;
+    background-size: contain;
+    background-size: 100% 75px;
+}
+#actSeven .txt_bord textarea{
+    width: 97%;
+    height: 63px;
+    border: none;
+    margin: 5px;
+    outline: none;
+    text-align: center;
+}
+#actSeven .btn_tj img{
+    width: 45%;
+}
+#actSeven .footer{
+    background: url("../images/active/7_share.png") no-repeat;
+    height: 75px;
+    padding: -35px;
+    margin: 15px;
+    background-size: contain;
+    background-size: 100% 75px;
+}

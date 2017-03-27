@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("actTwoController",[]);myControllers.controller("actTwoCtrl",["$scope","$stateParams",function(o,l){console.log("�2")}]);

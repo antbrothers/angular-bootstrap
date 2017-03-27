@@ -1,0 +1,179 @@
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/share.css">
+    
+    <title>推荐有礼</title>
+    <style>
+        .wrap {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #toast {
+            width: 80%;
+            position: fixed;
+            bottom: 5%;
+            left: 10%;
+            z-index: 999999;
+            background-color: rgba(0, 0, 0, .7);
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            -webkit-animation: zoomOut .3s ease both;
+        }
+
+        @-webkit-keyframes zoomOut {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(.6);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+            }
+        }
+    </style>
+
+</head>
+<body>
+<!--<header id="red_header">
+       <div class="head_title">
+           推荐有礼
+       </div>
+   </header>-->
+<div class="container-fluid">
+    <div class="red_m_back">
+        <div class="red_log">
+            <img src="../images/active/logo.png"/>
+        </div>
+        <div class="red_duihm">
+            <p class="red_type">红包兑换码</p>
+
+            <p class="red_ma" id="pass_ma">{{redeemCode}}</p>
+            <input id="txt" ng-model="redeemCode" style="display: none"/>
+
+            <p class="red_caoz">(长按复制)</p>
+        </div>
+    </div>
+    <div class="btn_share">
+
+        <button style="display: none" class="share_friend -mob-share-open android_type" onclick="androidShare()">分享给好友
+        </button>
+        <a style="display: none" href="" class="ios_type">
+            <button class="share_friend -mob-share-open">分享给好友</button>
+        </a>
+        <a href="#" class="ios_fz" style="display: none">
+            <button class="copy_passworld copy_passworld" id="current">复制兑换码</button>
+        </a>
+        <a href="#" class="android_fz" style="display: none" onclick="androidFz()">
+            <button class="copy_passworld copy_passworld" id="current">复制兑换码</button>
+        </a>
+    </div>
+    <div class="rewad_list">
+        <div class="rewad">
+            邀请奖励
+        </div>
+    </div>
+    <div class="rewad_detailed">
+        <ul>
+            <li ng-repeat="r in rule">
+                <div class="rewad_head">
+                    红包被成功兑换<span>{{r.redeemCount}}</span>次
+                </div>
+                <div class="rewad_all">
+                    <div class="rewad_world">
+                        <p ng-repeat="c in r.couponList">
+                            <span>{{c.parAmount}}</span>元
+                            <span ng-show="c.couponKind==0" style="color:#aaaaaa">通用卷</span>
+                            <span ng-show="c.couponKind==1" style="color:#aaaaaa">停车卷</span>
+                            <span ng-show="c.couponKind==2" style="color:#aaaaaa">月租产权劵</span>
+                            <span ng-show="c.couponKind==3" style="color:#aaaaaa">代泊券</span>
+                            <span ng-show="c.couponKind==4" style="color:#aaaaaa">车管家券</span>
+                            <span>1</span>张；
+                        </p>
+                    </div>
+                    <div class="rewad_draw" ng-show="r.isReceive==0 && r.redeemCount > bRed">
+                        <img src="../images/active/button1.png" alt="">
+                        <span class="draw">领取</span>
+                    </div>
+                    <div class="rewad_draw" ng-show="r.isReceive==1">
+                        <img src="../images/active/button1.png" alt="">
+                        <span class="draw">已领取</span>
+                    </div>
+                    <div class="rewad_draw" ng-show="r.isReceive==0 && r.redeemCount <= bRed "
+                         ng-click="receive(r.id, r.redeemCount,$event)">
+                        <img src="../images/active/button2.png" alt="">
+                        <span class="draw">未领取</span>
+                    </div>
+                    <!--<div class="rewad_draw"
+                         ng-click="receive(r.id, r.redeemCount,$event)">
+                        <img src="../../images/active/button2.png" alt="">
+                        <span class="draw">未领取</span>
+                    </div>-->
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wrap">
+
+    </div>
+</div>
+
+ <script type="text/javascript" src="../js/share.js"></script>
+<!-- 分享 begin -->
+<script type="text/javascript">
+    var url = location.href;
+    var customer_id = url.split('#')[1];
+    var option = {
+        title: '推荐有礼',
+        img: 'images/active/bjxt.png',
+        desc: '红包兑换',
+        link: 'other/html5/RedInvitation.html#' + customer_id
+    }
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+        $(".ios_type").css('display', 'block');
+        $(".ios_type").attr('href', 'exportFunction://share/' + JSON.stringify(option));
+
+        $('.ios_fz').css('display', 'block');
+        var ma=$("#pass_ma").text();
+        $(".ios_fz").attr('href', 'exportFunction://pasteboard/' +ma);
+    }
+    else if (browser.versions.android) {
+        $('.android_type').css("display", 'block');
+        $(".android_fz").css("display","block");
+    }
+    function androidShare() {
+        exportFunction.share(JSON.stringify(option));
+    }
+    function androidFz(){
+    	var ma=$("#pass_ma").text();    
+    	exportFunction.copy(ma);
+    }
+
+</script>
+<!-- 分享  end  -->
+
+
+</body>
+</html>

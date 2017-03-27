@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("illegaInforCtrlController",[]);myControllers.controller("illegaInforCtrl",["$scope","$stateParams",function(l,o){console.log("违章详情页面"),l.data=o}]);

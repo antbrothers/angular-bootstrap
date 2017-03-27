@@ -1,0 +1,135 @@
+#red_header {
+	width: 100%;
+	height: 50px;
+	background-color: #39CBAE;
+	color: white;
+	font-size: 18px;
+}
+
+#red_header .head_title {
+	width: 200px;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/*
+.container-fluid{
+    background: url("../../images/active/background.png") no-repeat;
+    height: 518px;
+    background-size: 320px;
+}*/
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.container-fluid .red_m_back {
+	background-image: url("../images/active/gift.png");
+	height: 251px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-size: 100%;
+}
+
+.container-fluid .red_m_back .red_log {
+	width: 200px;
+	margin: 0 auto;
+	position: relative;
+	/* top: 50%;
+     transform: translateY(-50%);*/
+	text-align: center;
+}
+
+.container-fluid .red_m_back .red_log img {
+	width: 70px;
+	margin-top: 16px;
+}
+
+.container-fluid .red_m_back .red_duihm {
+	text-align: center;
+}
+
+.container-fluid .red_m_back .red_duihm .red_type {
+	font-size: 19px;
+	font-weight: bold;
+	margin-top: 45px;
+}
+
+.container-fluid .red_m_back .red_duihm .red_ma {
+	font-size: 19px;
+	font-weight: bold;
+	color: #39CBAE;
+	margin-top: -9px;
+	letter-spacing: 2px;
+}
+
+.container-fluid .red_m_back .red_duihm .red_caoz {
+	margin-top: -10px;
+	font-size: 13px;
+}
+
+.container-fluid .red_init_main {
+	background-color: #EE484D;
+	height: 317px;
+	text-align: center;
+	color: white;
+}
+
+.red_init_main .main_jiazhi {
+	font-size: 15px;
+	color: white;
+}
+
+.red_init_main .price {
+	color: yellow;
+	font-size: 28px;
+}
+
+.red_init_main .desc {
+	margin-top: -7px;
+	font-size: 15px;
+}
+
+.red_init_main .jianli_desc {
+	word-spacing: 15px;
+	margin-top: 17px;
+	font-size: 12px;
+}
+
+.red_init_main .use_fa {
+	margin-top: -8px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.red_init_main .use_fa .user_luj {
+	color: yellow;
+}
+
+.red_init_main .btn_down img {
+	width: 268px;
+}
+
+.red_init_main .btn_down p.down_desc {
+	margin-top: -26px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+
+.red_init_main .btn_down {
+	margin-top: 15px;
+}
+
+.red_init_main .btn_kehuxiaz {
+	margin-top: 46px;
+}
+
+.btn_down a {
+	color: white;
+	text-decoration: initial;
+}

@@ -1,0 +1,13 @@
+#report_pc{
+   /* background-color: #E8E8E8;*/
+    font-family: "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "sans-serif";
+}
+#report_pc .report_head{
+    background-color: #E2E2E2;
+    height: 43px;
+    line-height: 43px;
+    font-weight: bold;
+}
+#report_pc .report_cont{
+    padding: 18px;
+}

@@ -1,0 +1,58 @@
+#paySuccess .success{
+    width: 100%;
+    text-align: center;
+    height: 97px;
+}
+#paySuccess .line{
+    border-bottom: 1px solid #dddddd;
+    margin: 5px;
+}
+#paySuccess .success_img{
+    width: 45px;
+    margin: 15px;
+    margin-bottom: 9px;
+}
+#paySuccess .success_txt{
+    font-size: 14px;
+    font-weight:bold;
+    letter-spacing: 2px;
+    color: #333333;
+}
+#paySuccess .list-group{
+    margin-bottom: 9px;
+}
+#paySuccess .list-group .list-group-item{
+    font-size: 13px;
+    color: #696969;
+    padding: 2px 12px;
+    border: 1px solid white;
+}
+#paySuccess .list-group .badge{
+    background-color:white;
+    color: #696969;
+    font-weight:inherit;
+    letter-spacing: 1px;
+    padding: 3px 0px;
+    font-size: 13px;
+}
+#paySuccess .btn_main{
+    text-align: center;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+#paySuccess .btn_com{
+    border-radius: 3px;
+    background-color: #DDDDDD;
+    border: none;
+    padding: 4px;
+    font-size: 13px;
+    width: 100%;
+    outline: none;
+}
+#paySuccess .btn_look{
+    background:#3AD5B8;
+    color: white;
+}
+#paySuccess .btn_rt{
+    color: grey;
+}

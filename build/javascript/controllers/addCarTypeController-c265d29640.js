@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("addCarTypeController",[]);myControllers.controller("addCarTypeCtrl",["$scope","$stateParams",function(r,o){console.log("添加加油卡类型")}]);

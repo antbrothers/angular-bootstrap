@@ -1,0 +1,124 @@
+
+<div id="replaceStop">
+    <ul class="list-group" style="margin-bottom: 0px">
+        <li class="list-group-item" ng-click="selectReplacePark()">
+           <!-- <img class="replace_ion" src="../images/replaceStop/location_w.png"/>-->
+            代泊车场
+            <img src="../images/replaceStop/right.png" class="ion_right"/>
+            <span class="right_comm park_name" ng-bind="parkName"></span>
+
+        </li>
+        <li class="list-group-item">
+            <!--<img class="replace_ion" src="../images/replaceStop/car_w.png"/>-->
+            车牌号码
+            <span class="right_comm">
+                 <!-- <img src="../images/replaceStop/right.png" class="ion_right"/>-->
+                 <!-- <input ng-model="plate" class="inp_clear_comm" name="plate" placeholder="请输入车牌号"/> -->
+				<div id="1" class="button" data-value="{{data.num1}}" data-val='1' ng-click="licensePlate()" ng-bind="data.num1"></div>
+				<div id="2" class="button" data-value="{{data.num2}}" data-val='2' ng-click="EnglishNumber()" ng-bind="data.num2"></div>
+				<div class="button button1"></div>
+				<div id="3" class="button" data-value="{{data.num3}}" data-val='3' ng-click="EnglishNumber()" ng-bind="data.num3"></div>
+				<div id="4" class="button" data-value="{{data.num4}}" data-val='4' ng-click="EnglishNumber()" ng-bind="data.num4"></div>
+				<div id="5" class="button" data-value="{{data.num5}}" data-val='5' ng-click="EnglishNumber()" ng-bind="data.num5"></div>
+				<div id="6" class="button" data-value="{{data.num6}}" data-val='6' ng-click="EnglishNumber()" ng-bind="data.num6"></div>
+				<div id="7" class="button" data-value="{{data.num7}}" data-val='7' ng-click="EnglishNumber()" ng-bind="data.num7"></div>
+            </span>
+        </li>
+        <script type="text/javascript">
+			$('.button').click(function(){
+				$('.button').css({
+					'border':'1px solid #E5E5E5'
+				});
+				$(this).css({
+					'border':'1px solid #3AD5B8'
+				}); 
+				$(".button").removeClass('currnt');
+				$(this).addClass("currnt");
+			});
+		</script>
+		<!-- 模拟键盘 -->
+		<div class="jianpan jianpan1">
+			<div class="p-button">
+				<div class="M-button" ng-repeat="x in name" >
+					<button ng-if="x !='I' && x !='O' && x != 'images/垃圾桶.png'" ng-click="click($event,x)">{{x}}</button>
+				
+					<button ng-if="x =='I' || x =='O'" style="background:#e4e2df;">{{x}}</button>
+					
+					<button ng-if="x =='images/垃圾桶.png'" ng-click="clear($event)">
+						<img style="width:100%;height:100%;" alt="垃圾桶" src="../{{x}}">
+					</button>
+						
+				</div>
+				
+			</div>
+		</div>
+        <li class="list-group-item">
+           <!-- <img class="replace_ion" src="../images/replaceStop/take_t_w.png"/>-->
+            下单时间
+                <span class="right_comm">
+                    <span ng-bind="date.getHour"></span>
+                </span>
+        </li>
+        <li class="list-group-item">
+           <!-- <img class="replace_ion" src="../images/replaceStop/valet_t_w.png"/>-->
+            预计取车时间
+           <!-- <img src="../images/replaceStop/right.png" class="ion_right"/>-->
+                <span class="take_time">
+                    <input ng-model="takeTime" class="how_take_time" placeholder="您要几点取车"/>
+                </span>
+        </li>
+
+        <li class="list-group-item">
+            <!--<div class="predict_price total_price">
+                预计费用<span class="price" ng-bind="price"></span>元
+            </div>
+            <div class="price_use total_price">
+                {{description}}
+            </div>-->
+            预计费用
+                <span class="right_comm">
+                    <span class="price" ng-bind="price" style="color: #f50"></span>元
+                </span>
+        </li>
+
+    </ul>
+    <!--<div class="row">
+        <div class="replace_desc">说明：</div>
+        <div class="col-xs-10 replace_cont">
+            你好！小P帮你泊车啦~
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn_replace_stop" ng-click="nowReplace()" style="font-size: 17px;letter-spacing: 2px">确定订单</button>
+        </div>
+    </div>
+    <div class="row" id="xieyi">
+        <div class="col-xs-12">
+            <div>
+                <img class="checkImg" src="../images/agree.png" ng-click="agree('agreeCheck')">
+                <input style="display: none" type="checkbox" class="agreeCheck" checked="true">
+                <span class="xieyi_ft">我已同意<a href="#/home/payAgree" style="color:#3AD5B8">《口袋停停车缴费协议》</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty_page" style="display:block; position: absolute;top: 0%;left: 0%;background: white;width: 100%;height: 100%;z-index: 1"></div>
+    <!-- 停车场列表  begin -->
+    <div class="park_list" ng-show="parklist" ng-click="closeList()">
+        <div class="park_list_main">
+            <ul class="list-group">
+                <li class="list-group-item last_more">
+                    选择代泊车场
+                </li>
+                <li class="list-group-item" ng-repeat="parkArr in parkList" ng-click="selectPark(parkArr.parkingName,parkArr.parkingId)">
+                    <img class="replace_ion" src="../images/replaceStop/location_w.png"/>
+                    {{parkArr.parkingName}}
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- 停车场列表  end   -->
+</div>
+<div id="mapcontainer"></div>

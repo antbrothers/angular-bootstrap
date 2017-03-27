@@ -1,0 +1,36 @@
+{
+  "errorNum": "0",
+  "errorInfo": "成功",
+  "data": {
+    "todayDesc":"今日收入",
+    "todayIncome":"10000.0",
+    "freeRelease":"200",
+    "remit":"50",
+    "dayStatisticsMap":[
+      {
+        "desc":"月租线上",
+        "value":"2000.1"
+      },
+      {
+        "desc":"月租线下",
+        "value":"3000.5"
+      },
+      {
+        "desc":"产权线上",
+        "value":"1000"
+      },
+      {
+        "desc":"产权线下",
+        "value":"2000"
+      },
+      {
+        "desc":"临停线上",
+        "value":"500"
+      },
+      {
+        "desc":"临停线下",
+        "value":"100"
+      }
+    ]
+  }
+}

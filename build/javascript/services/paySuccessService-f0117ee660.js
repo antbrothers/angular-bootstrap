@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("paySuccessServices",[]);myService.factory("paySuccessService",["$http",function(e){return{orderdetail:function(r,c){return e.get("/wx_share/order/myaccount/orderdetail?orderId="+r+"&orderType="+c)}}}]);

@@ -1,0 +1,63 @@
+
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+<link rel="stylesheet" type="text/css" href="../css/addCarType.css"/>-->
+<!-- 2016.05.25 按需加载资源 begin -->
+<header id="red_header">
+    <a href="#/home/gasCard">
+        <div class="ret_cont">
+            <div class="ret_left">
+                <img src="../images/addGasCard/back.png">
+            </div>
+        </div>
+    </a>
+    <div class="head_title">添加加油卡</div>
+</header>
+<div class="chooseCarType">
+    <p>选择加油卡类型</p>
+    <ul class="carType">
+        <li class="gasCard"  id="current">
+            <div class="car">
+                <img src="../images/addGasCard/shihua.png">
+                <div class="carfont">
+                    <p>中国石化</p>
+                    <h1>加油卡</h1>
+                </div>
+            </div>
+            <img class="choose "  src="../images/addGasCard/choose.png">
+        </li>
+        <li class="gasCard" >
+            <div class="car">
+                <img src="../images/addGasCard/shiyou.png">
+                <div class="carfont">
+                    <p>中国石油</p>
+                    <h1>加油卡</h1>
+                </div>
+            </div>
+            <img class="choose"  style="display: none" src="../images/addGasCard/choose.png">
+        </li>
+    </ul>
+</div>
+<div class="message">
+    <label>姓名</label><input type="text">
+    <label>手机号<span> * </span></label><input type="text" placeholder="请填写手机号（必填）">
+    <label>加油卡号<span> * </span></label><input type="text" placeholder="请添加加油卡号（必填）">
+</div>
+<button class="confirmAdd">确认添加</button>
+<script type="text/javascript">
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function(){
+        getFont();
+    }
+    function getFont(){
+        var screenWidth = oHtml.clientWidth;
+        if(screenWidth <= 320){
+            oHtml.style.fontSize = '8px';
+        }else if(screenWidth >= 640){
+            oHtml.style.fontSize = '23.7037px';
+        }else{
+            oHtml.style.fontSize = screenWidth/(1080/40)+'px';
+        }
+    }
+</script>

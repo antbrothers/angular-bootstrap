@@ -1,0 +1,231 @@
+body{
+    background-color: hsl(0, 3%, 92%);
+}
+#reservedParkOrder{
+    width: 100%;
+    height:100%;
+
+}
+#reservedParkOrder .head_desc{
+    text-indent: 1.8rem;
+    margin-top: 0.8rem;
+    background-color: white;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    color: #696969;
+    font-size: 1rem;
+}
+#reservedParkOrder .car_number{
+    font-size: 1.2rem;
+    color: #333333;
+    height: 2.8rem;
+    line-height: 3.2rem;
+    padding-left: 1.0rem;
+    font-weight: bold;
+}
+#reservedParkOrder .shu_ru_car{
+    height: 3rem;
+    background-color: white;
+}
+#reservedParkOrder .cn{
+    height: 2.2rem;
+    margin-top: 0.35rem;
+    margin-left: 1.0rem;
+    outline: none;
+    border-radius: 0.3rem;
+    -webkit-appearance: none;
+    border: 0.1rem solid hsl(0, 0%, 73%);
+    width: 24.7rem;
+    text-align: center;
+}
+#reservedParkOrder .time_cont {
+    margin-top: 1rem;
+    background-color: white;
+}
+#reservedParkOrder .select_time{
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    font-size: 1.0rem;
+}
+#reservedParkOrder .line{
+    border: 0.1rem solid #e0e0e0;
+    border-top: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+#reservedParkOrder #wrapper {
+    position: relative;
+    z-index: 1;
+    height: 8.7rem;
+    width: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+}
+
+#reservedParkOrder #scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 67.9rem;
+    height: 8.7rem;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#reservedParkOrder #scroller ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#reservedParkOrder #scroller li {
+    width: 10.7rem;
+    height: 8.7rem;
+    float: left;
+  /*  line-height: 7rem;*/
+    border-bottom: 0.1rem solid #ccc;
+    overflow: hidden;
+    text-align: center;
+    padding: 0.8rem;
+}
+#reservedParkOrder .week{
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+#reservedParkOrder .date_col{
+    background-color: #39D5B8;
+    border-radius: 1rem;
+    height: 1.7rem;
+    line-height: 1.94rem;
+    color: white;
+    font-size: 0.9rem;
+    width: 7rem;
+    margin: 0 auto;
+}
+#reservedParkOrder .price{
+    color: #39D5B8;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+}
+#reservedParkOrder .riqi{
+    font-size: 0.9rem;
+}
+#reservedParkOrder .taocan{
+    margin-top: 1rem;
+    background-color: white;
+}
+#reservedParkOrder .selec_comm{
+    width: 1.3rem;
+}
+#reservedParkOrder .tac_desc{
+    color: #aaaaaa;
+    font-size: 1rem;
+    /*margin-left: 1rem;*/
+    /*float: right;*/
+}
+#reservedParkOrder .comm{
+    border: 1px solid #aaaaaa;
+    padding: 0.1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+#reservedParkOrder .tc_price{
+    font-size: 1.1rem;
+}
+#reservedParkOrder .sel_img{
+    float: left;
+    line-height: 3.5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+#reservedParkOrder .pp{
+    float: left;
+}
+#reservedParkOrder .jia {
+    color: #39D5B8;
+    margin: 0.2rem;
+}
+#reservedParkOrder .tac_yh{
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+#reservedParkOrder .tall_price{
+    margin-top: 1rem;
+    background-color: white;
+    height: 3rem;
+    line-height: 3rem;
+}
+#reservedParkOrder .price_desc{
+    float: left;
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: #696969;
+}
+#reservedParkOrder .price_all{
+    float: right;
+    padding-right: 1rem;
+    font-size: 1rem;
+    color: #696969;
+}
+#reservedParkOrder .yuan{
+    font-size: 1.6rem;
+    color: #f98000;
+}
+#reservedParkOrder .btn{
+    background-color: #3AD5B8;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+#reservedParkOrder .btn_cmm{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+#reservedParkOrder .tc_main{
+    padding-bottom: 0.5rem;
+}
+
+#reservedParkOrder .check_time .unselect{
+    color: #aaaaaa;
+    background-color: white;
+}
+#reservedParkOrder .date_col.unselect{
+    border: 1px solid #aaaaaa;
+}
+#reservedParkOrder .zw{
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.1rem;
+}

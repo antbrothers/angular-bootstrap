@@ -1,0 +1,1 @@
+"use strict";var myService=angular.module("loginServices",[]);myService.factory("loginService",["$http",function(e){return{getOpenId:function(r){return e.get("/wx_share/wxpay/getOpenId?code="+r)},login:function(r,t,n){return e.post("/wx_share/Register/postLogin/"+r+"/"+t+"/"+n)}}}]);

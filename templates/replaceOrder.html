@@ -1,0 +1,188 @@
+<!-- 2016.05.25 按需加载资源 begin -->
+<!--<link rel="stylesheet" type="text/css" href="../css/base.css?V=0.00001"/>
+<link rel="stylesheet" href="../scripts/swipe/css/swiper.min.css"/>
+<link rel="stylesheet" href="../css/replaceOrder.css?V=0.00001"/>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../js/tool/pic.js"></script>
+<script src="../scripts/swipe/js/swiper.min.js"></script>-->
+<!-- 2016.05.25 按需加载资源 end -->
+
+<div class="swiper-container car_swiper" id="swiper-container2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide carNumber" ng-repeat="plateArr in plateList"><h1 ng-bind="plateArr.carNumber"></h1>
+        </div>
+    </div>
+    <div class="swiper-button-prev btn"></div>
+    <div class="swiper-button-next btn"></div>
+</div>
+<div class="orderDetail">
+
+
+    <!-- 已预约状态 begin -->
+    <div class="course" ng-if="viewIndexActiveCar.orderStatus==1">
+        <ul class="statius" >
+            <li class="current">已预约</li>
+            <li>停车中</li>
+            <li>停车完毕</li>
+            <li>取车中</li>
+            <li>订单完成</li>
+        </ul>
+        <div class="progressBar">
+            <div class="progressBarLength"></div>
+            <img src="../images/daiBo/car_ico.png">
+        </div>
+        <!-- 停车中状态  begin -->
+        <div class="progressBar" ng-show="viewIndexActiveCar.orderStatus==2">
+            <div class="progressBarLength progressBarLength_stoping"></div>
+            <img src="../images/daiBo/car_ico.png" class="car_img_stoping">
+        </div>
+        <!-- 停车中状态  end -->
+        <img class="data" src="../images/daiBo/data.png">
+    </div>
+    <!-- 已预约状态 end -->
+    <!-- 停车中状态 beign-->
+    <div class="course" ng-if="viewIndexActiveCar.orderStatus==2">
+        <ul class="statius" >
+            <li>已预约</li>
+            <li class="current">停车中</li>
+            <li>停车完毕</li>
+            <li>取车中</li>
+            <li>订单完成</li>
+        </ul>
+        <div class="progressBar">
+            <div class="progressBarLength progressBarLength_stoping"></div>
+            <img src="../images/daiBo/car_ico.png" class="car_img_stoping">
+        </div>
+        <img class="data" src="../images/daiBo/data.png">
+    </div>
+    <!-- 停车中状态 end  -->
+    <!-- 停车完毕状态 beign-->
+    <div class="course" ng-if="viewIndexActiveCar.orderStatus==4 || viewIndexActiveCar.orderStatus==14 || viewIndexActiveCar.orderStatus==15">
+        <ul class="statius" >
+            <li>已预约</li>
+            <li>停车中</li>
+            <li class="current">停车完毕</li>
+            <li>取车中</li>
+            <li>订单完成</li>
+        </ul>
+        <div class="progressBar">
+            <div class="progressBarLength progressBarLength_stoping_done"></div>
+            <img src="../images/daiBo/car_ico.png" class="car_img_stoping_done">
+        </div>
+        <img class="data" src="../images/daiBo/data.png">
+    </div>
+    <!-- 停车完毕状态 end  -->
+    <!-- 取车中状态 beign-->
+    <div class="course" ng-if="viewIndexActiveCar.orderStatus==8 || viewIndexActiveCar.orderStatus==9">
+        <ul class="statius" >
+            <li>已预约</li>
+            <li>停车中</li>
+            <li>停车完毕</li>
+            <li class="current">取车中</li>
+            <li>订单完成</li>
+        </ul>
+        <div class="progressBar">
+            <div class="progressBarLength progressBarLength_stoping_done_get"></div>
+            <img src="../images/daiBo/car_ico.png" class="car_img_stoping_done_get">
+        </div>
+        <img class="data" src="../images/daiBo/data.png">
+    </div>
+    <!-- 取车中状态 end  -->
+    <!-- 订单完成状态 beign-->
+    <div class="course" ng-if="viewIndexActiveCar.orderStatus==5">
+        <ul class="statius" >
+            <li>已预约</li>
+            <li>停车中</li>
+            <li>停车完毕</li>
+            <li>取车中</li>
+            <li class="current">订单完成</li>
+        </ul>
+        <div class="progressBar">
+            <div class="progressBarLength progressBarLength_stoping_done_get_all"></div>
+            <img src="../images/daiBo/car_ico.png" class="car_img_stoping_done_get_all">
+        </div>
+        <img class="data" src="../images/daiBo/data.png">
+    </div>
+    <!-- 订单完成状态 end  -->
+
+
+    <div class="CarButler">
+        <p>车管家: <span ng-bind="viewIndexActiveCar.parkerName"></span></p>
+
+        <h1><img src="../images/daiBo/phone_va.png"><span ng-bind="viewIndexActiveCar.parkerMobile"></span></h1>
+    </div>
+    <div class="orderMessage">
+        <ol>
+            <li>订单号：<span ng-bind="viewIndexActiveCar.orderId"></span></li>
+            <li>接车时间：<span ng-bind="viewIndexActiveCar.orderBeginDate"></span></li>
+            <li>预约取车时间：<span ng-bind="viewIndexActiveCar.orderEndDate"></span></li>
+            <li>目前费用：<span style="color:#39d5b8" ng-bind="viewIndexActiveCar.amountPayable"></span>元</li>
+            <li>停车时长：<span class="blue" ng-bind="differDate"></span></li>
+            <li ng-show="over">目前已超出预约取车时间：<span class="orange" ng-bind="overDate"></span></li>
+            <!-- <li>停车时长：<span class="blue">00:30:20</span></li>
+             <li>目前已超出预约取车时间：<span class="orange">05:30:20</span></li>
+             <li>目前费用：<span class="blue">50</span>元</li>-->
+        </ol>
+    </div>
+    <div>
+        <div id="img_swiper_contain">
+            <div class="swiper-container img_swiper" style="width: 80%;margin: 0 auto">
+                <div class="swiper-wrapper pic_content">
+                    <div class="swiper-slide" ng-repeat="parkingImage in parkingImageArrFilter track by $index" ng-if="parkingImage !=''">
+                        <div class="img-con" load-src="{{parkingImage}}" style="background:url({{parkingImage}}) 50% 50% no-repeat;height: 80px; background-size: cover;"></div>
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev btn img_swiper_prev" ng-show="hasCarImg"></div>
+            <div class="swiper-button-next btn img_swiper_next" ng-show="hasCarImg"></div>
+        </div>
+    </div>
+    <div class="btnCancel">
+        <!-- 已预约状态  begin -->
+        <button class="cancleOrder" ng-show="viewIndexActiveCar.orderStatus==1" ng-click="cancelReplace()">
+            取消代泊
+        </button>
+        <!-- 已预约状态  end -->
+        <!-- 停车中状态 停车完毕  begin -->
+        <button class="cancleOrder" ng-show="viewIndexActiveCar.orderStatus==2 || viewIndexActiveCar.orderStatus ==4 || viewIndexActiveCar.orderStatus ==14 || viewIndexActiveCar.orderStatus ==15" ng-click="getCar()">
+            我要取车
+        </button>
+        <!-- 停车中状态 停车完毕 end   -->
+        <!-- 取车中状态  begin -->
+        <button class="cancleOrder" ng-show="viewIndexActiveCar.orderStatus==8 || viewIndexActiveCar.orderStatus==9">
+            已预约取车
+        </button>
+        <!-- 取车中状态  end -->
+        <!-- 已完成  begin -->
+        <button class="cancleOrder" ng-show="viewIndexActiveCar.orderStatus==5" style="background-color: #A5A1A1">
+            已完成
+        </button>
+        <!-- 已完成  end -->
+    </div>
+
+</div>
+<div class="empty_page" style="display:none;position: absolute;top: 0%;left: 0%;background: white;width: 100%;height: 100%;z-index: 1"></div>
+
+<!-- 没有数据加载层 begin -->
+<div class="no_data">
+    <div class="no_data_desc">您没有代泊订单</div>
+</div>
+<!-- 没有数据加载层 end   -->
+<script type="text/javascript">
+    //响应式代码
+    var oHtml = document.documentElement;
+    getFont();
+    window.onresize = function () {
+        getFont();
+    }
+    function getFont() {
+        var screenWidth = oHtml.clientWidth;
+        if (screenWidth <= 320) {
+            oHtml.style.fontSize = '8px';
+        } else if (screenWidth >= 640) {
+            oHtml.style.fontSize = '23.7037px';
+        } else {
+            oHtml.style.fontSize = screenWidth / (1080 / 40) + 'px';
+        }
+    }
+</script>

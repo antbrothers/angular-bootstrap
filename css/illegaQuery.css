@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(249, 249, 249);
+}
+#illegaQuery.container-fluid{
+    padding-right: 15px;
+     padding-left: 15px;
+    margin-top: inherit;
+     background-color: inherit;
+}
+#illegaQuery .input-default{
+    border: none;
+    outline: medium;
+    text-align: right;
+    width: 167px;
+    line-height: 17px;
+}
+#illegaQuery .illega_title{
+    font-size: 14px;
+}
+#illegaQuery .illega{
+    float: right;
+    font-size: 15px;
+}
+#illegaQuery .illega>i{
+    color: darkgrey;
+}
+#illegaQuery .row{
+    margin-top: 4px;
+    background-color: white;
+    height: 36px;
+    line-height: 36px;
+}
+#illegaQuery .row:last-child{
+    background-color: inherit;
+    border-bottom: none;
+    margin-top: 30px;
+}
+#illegaQuery .engineno{
+    width: 174px;
+}
+#illegaQuery .btn_qued{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+    color: white;
+    background-color: #3AD5B8;
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,1 @@
+var myControllers=angular.module("gasCarController",[]);myControllers.controller("gasCardCtrl",["$scope","$stateParams",function(o,r){console.log("添加加油卡")}]);

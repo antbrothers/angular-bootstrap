@@ -1,0 +1,253 @@
+.payNumber{
+	position: absolute;
+	top: 0;
+	width:16.0rem ;
+	height: 25.72rem;
+	background-image: url(../images/payNumber/bg.png);
+	background-size: 100%;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.logo{
+	width: 5.675rem;
+	height: 2.048rem;
+	margin: auto;
+	margin-top: 1.25rem;
+}
+.title{
+	width: 12.48rem;
+	height: 3.819rem;
+	margin: auto;
+	margin-top: 1.9rem;
+}
+.word{
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-size: 0.75rem;
+	color: #ffffff;
+	margin-top: 2.55rem;
+}
+.qrCode{
+	width: 6.4rem;
+	height: 6.4rem;
+	margin: auto;
+	margin-top: 0.55rem;
+}
+
+
+
+/* .payNumber{
+	position: absolute;
+	top: 0;
+	width:32.0rem ;
+	height: 50.4rem;
+	background-image: url(../images/payNumber/bg.png);
+	background-size: 100%;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.logo{
+	width: 9.45833rem;
+	height: 3.375rem;
+	margin: auto;
+	margin-top: 1.8333rem;
+}
+.title{
+	width: 20.8333rem;
+	height: 6.2083rem;
+	margin: auto;
+	margin-top: 2.25rem;
+}
+.word{
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-size:1.25rem;
+	color: #ffffff;
+	margin-top: 3.25rem;
+}
+.qrCode{
+	width: 10.70833rem;
+	height: 10.70833rem;
+	margin: auto;
+	margin-top: 0.75rem;
+}  */
+
+
+
+/*  .payNumber{
+	background-image: url(../images/payNumber/bg.png);
+	background-size: 100%;
+	overflow:hidden;
+	width: 27.0rem;
+    height: 43.41rem;
+    padding:0;
+    margin:0;
+}
+.payNumber img{
+	width: 100%;
+	height: 100%;
+}
+.payNumber .logo{
+	width: 9.5rem;
+	height: 3.4rem;
+	margin: auto;
+	margin-top: 25px;
+}
+.payNumber .title{
+	width: 20.9rem;
+	height: 6.4rem;
+	margin: auto;
+	margin-top:38px;
+}
+.payNumber .word{
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-size: 1.214rem;
+	color: #ffffff;
+	font-weight:bold;
+	margin-top: 51px;
+}
+.payNumber .qrCode{
+	width: 10.71rem;
+	height: 10.71rem;
+	margin: auto;
+	margin-top: 11px;
+}  */
+
+
+
+/* @media screen and (max-width: 375px) {
+   .payNumber{
+		background-image: url(../images/payNumber/bg.png);
+		background-size: 100%;
+		overflow:hidden;
+		width: 27.0rem;
+	    height: 43.41rem;
+	    padding:0;
+	    margin:0;
+	}
+	.payNumber img{
+		width: 100%;
+		height: 100%;
+	}
+	.payNumber .logo{
+		width: 9.5rem;
+		height: 3.4rem;
+		margin: auto;
+		margin-top: 25px;
+	}
+	.payNumber .title{
+		width: 20.9rem;
+		height: 6.4rem;
+		margin: auto;
+		margin-top:38px;
+	}
+	.payNumber .word{
+		margin:0;
+		padding:0;
+		text-align: center;
+		font-size: 1.214rem;
+		color: #ffffff;
+		font-weight:bold;
+		margin-top: 51px;
+	}
+	.payNumber .qrCode{
+		width: 10.71rem;
+		height: 10.71rem;
+		margin: auto;
+		margin-top: 11px;
+	}
+}
+@media screen and (max-width: 320px) {
+   .payNumber{
+		background-image: url(../images/payNumber/bg.png);
+		background-size: 100%;
+		overflow:hidden;
+		width: 26.6667rem;
+	    height: 45.3333rem;
+	    padding:0;
+	    margin:0;
+	}
+	.payNumber img{
+		width: 100%;
+		height: 100%;
+	}
+	.payNumber .logo{
+		width: 9.5rem;
+		height: 3.4rem;
+		margin: auto;
+		margin-top: 25px;
+	}
+	.payNumber .title{
+		width: 20.9rem;
+		height: 6.4rem;
+		margin: auto;
+		margin-top:38px;
+	}
+	.payNumber .word{
+		margin:0;
+		padding:0;
+		text-align: center;
+		font-size: 1.214rem;
+		color: #ffffff;
+		font-weight:bold;
+		margin-top: 51px;
+	}
+	.payNumber .qrCode{
+		width: 10.71rem;
+		height: 10.71rem;
+		margin: auto;
+		margin-top: 11px;
+	}
+}
+@media screen and (min-width: 500px) {
+   .payNumber{
+		background-image: url(../images/payNumber/bg.png);
+		background-size: 100%;
+		overflow:hidden;
+		width: 27.0rem;
+	    height: 45.3333rem;
+	    padding:0;
+	    margin:0;
+	}
+	.payNumber img{
+		width: 100%;
+		height: 100%;
+	}
+	.payNumber .logo{
+		width: 9.5rem;
+		height: 3.4rem;
+		margin: auto;
+		margin-top: 25px;
+	}
+	.payNumber .title{
+		width: 20.9rem;
+		height: 6.4rem;
+		margin: auto;
+		margin-top:38px;
+	}
+	.payNumber .word{
+		margin:0;
+		padding:0;
+		text-align: center;
+		font-size: 1.214rem;
+		color: #ffffff;
+		font-weight:bold;
+		margin-top: 51px;
+	}
+	.payNumber .qrCode{
+		width: 10.71rem;
+		height: 10.71rem;
+		margin: auto;
+		margin-top: 11px;
+	}
+}
+ */
+

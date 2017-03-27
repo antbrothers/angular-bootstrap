@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>临停车辆</title>
+    <link rel="stylesheet" href="../css/html5/base.css">
+    <link rel="stylesheet" href="../css/html5/index.css">
+    <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/html5/jaxtoll.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+    /* var code = GetQueryString("code");
+    var customerId = GetQueryString("customerId");
+    alert(customerId);
+	$(function(){
+		if(code==null){
+			vorcher();
+		}
+	})
+    function GetQueryString(name)
+    {
+         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+         var r = window.location.search.substr(1).match(reg);
+         if(r!=null)return  unescape(r[2]); return null;
+    }
+    function vorcher(){
+    	window.location="http://p-share.cn/wx_share/wxpay/getAuthor?backUri=http://p-share.cn/wx_share/wxpay/getCode?directUrl=http://p-share.cn/wx_share/html5/temporaryTest.html&customerId=12ooo";
+    }
+   
+        var ary = new Array();
+        function queryCars(inputCarNumber, currentIndex) {
+            //var carNumber =$("#carNumber").val();
+            //存入h5数据缓存
+            console.log(currentIndex);
+
+            var carNumber = inputCarNumber;
+            if (!(/^[\u4E00-\u9FA5][\da-zA-Z]{6}$/).test(carNumber)) {
+                alert("请输入正确的车牌");
+                return false;
+            }
+            else {
+                var AcarNumber = carNumber.toUpperCase();
+                if (ary.indexOf(AcarNumber) == -1) {
+                    ary.push(AcarNumber);
+                }
+                if (ary.length > 3) {
+                    ary = ary.splice(1, 3);
+                }
+                localStorage.setItem("item1", ary);
+                console.log(ary);
+                updateView(ary, currentIndex);
+                //$(".center").val(AcarNumber);
+            }
+            var param = {
+                "customerId": "P2015122900000003",
+                "carNumber": AcarNumber,
+            };
+            var str = param.customerId + param.carNumber + jsonUrl.key;
+            var summary = $.md5(str);
+
+            var cardata = EX.ajaxTollPshare.commenGet(jsonUrl.carList + param.customerId + "/" + param.carNumber + "/" + summary);
+            console.log(cardata);
+            if (cardata.errorNum == 0) {
+                var cars = cardata.cars;
+                if (cars.length == 0) {
+                    $("#zu").html("");
+                    $("#orderNum").html(0);
+                    alert("小p暂未找到您的爱车临停订单,如需缴款，可直接前往岗亭处");
+                    return false;
+                }
+                $("#orderNum").html(cars.length);
+
+                var car = cars[0];
+                $("#zu").html("");
+                var html =
+                        '<div class="section">' +
+                        '<div class="chepai">' +
+                        '<span class="left" id="left">' + car.carNumber + '</span>' +
+                        '<span class="right">' + car.parkingName + '</span>' +
+                        '</div>' +
+                        '<div class="time">进场时间:<span>' + car.beginDate + '</span></div>' +
+                        '<ul class="detail">' +
+                        '<li class="parktime">' +
+                        '<span>停车时长:</span>' +
+                        '<div class="times">' + car.parkingTime + '</div>' +
+                        '</li>' +
+                        '<li class="parkpay">' +
+                        '<span>停车金额:</span>' +
+                        '<div class="pays">' + car.amountPayable + '<span>元</span></div>' +
+                        '</li>' +
+                        '</ul>' +
+                        '<button class="paynow"  onclick="createOrderC(\'' + car.carNumber + '\', \'' + car.parkingId + '\')">立即支付</button>' +
+                        '</div>'
+                $("#zu").html(html);
+
+
+            }
+
+            //console.log(localStorage.getItem("item1"));
+
+        } */
+        function GetQueryString(name)
+        {
+             var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  unescape(r[2]); return null;
+        }
+         function weixinpaycall(data) {
+			//alert("weixinpaycall start");
+			//授权
+			//alert(data.appId);
+			//alert(data.timestamp);
+			//alert(data.nonceStr);
+			//alert(data.signature);
+			wx.config({
+			    debug: true, // 开启调试模式
+			    appId: data.appId,
+			    timestamp: data.timestamp,
+			    nonceStr: data.nonceStr,
+			    signature: data.signature,
+			    jsApiList: ['chooseWXPay']
+			}); 
+			//授权成功
+			  wx.ready(function(){
+				//alert("getWebPayOptions start");
+				//get prepayid
+				var prepayStr = "";
+				alert(openId);
+					 $.ajax({
+						url: "http://p-share.cn/wx_share/wxpay/towxPay",
+						type: "POST",
+						dataType: "json",
+						data : {money: "0.02",
+								body: "bx",
+								openId: openId,
+								orderNo: "testx00000000003",
+								notify_url:"http://p-share.cn/wx_share/wxpay/back_10"},
+						success: function(data){
+							//alert(111111);
+							//alert("chooseWXPay start");
+							//alert(data.appId);
+							//alert("timestamp"+data.timeStamp);
+							//alert(data.nonceStr);
+							//alert(data.sign);
+							//alert(data.package);
+							 wx.chooseWXPay({
+								timestamp: data.timeStamp,
+								nonceStr: data.nonceStr,
+							    package: data.package,
+							    signType: 'MD5',
+							    paySign: data.sign,
+							    success: function (res) {
+							        PaySuccess();
+									$.MsgBox.Alert("提醒", "支付成功");
+							        // 支付成功后的回调函数
+							    },
+								fail: function() {
+									$.MsgBox.Alert("提醒", "支付失败");
+								}
+							}); 
+						},
+						complete: function() {
+							hideLoader();
+						},
+						error:function(){
+							alert(error);
+						}
+					}); 
+			}); 
+			//授权失败
+			wx.error(function() {
+				//alert("wx.error");
+			})
+		}
+         var code = null;
+        var openId = null;
+        $(function () {
+        	code = GetQueryString("code");
+        	//alert(code);
+        	$.ajax({
+                type: 'post',
+                async: false,
+                url: 'http://p-share.cn/wx_share/wxpay/getOpenId?code=' + code,
+                dataType: "json",
+                success: function (msg) {
+                	//alert("11111111111");
+                    openId = msg.openId;
+                   // alert(openId);
+                },
+                error: function (res) {
+                }
+            })
+        	alert(openId+"lalalalal");
+        	$.ajax({
+				url: "http://p-share.cn/wx_share/wxpay/getWxConfig",
+				type: "POST",
+				dataType: "json",
+				//data : {openId:$("#openId").val(), url:"/Mylife/payInput"},
+				data : {openId:"oaBhPwWyhTL0J_QR_fJY0JhRyoak", url:"/Mylife/payInput"},
+				success: function(data) {
+					//alert(data.appId);
+					//alert(data.timestamp);
+					weixinpaycall(data);
+				},
+				error: function() {
+					hideLoader();
+				}
+			});
+        })
+        //currentIndex = -1 表示不绘制选中绿色小图标，其他 0 1 2 分别绘制对应的绿色小图标
+       /*  function updateView(param, currentIndex) {
+
+            if (param.length > 0) {
+                $("#historyCar").html("");
+                var html = "";
+                var j = -1;
+                for (var i = param.length - 1; i >= 0; i--) {
+                    j++;
+                    html += '<li id="carNumber1" onclick="queryCars(\'' + param[i] + '\', \'' + j + '\')">' + param[i] + '</li>';
+
+                }
+
+                $("#historyCar").html(html);
+                if (currentIndex != -1) {
+                    var n = currentIndex;
+                    $('.selectList li').eq(n).addClass('current').siblings().removeClass('current');
+                }
+
+                console.log($("#historyCar"));
+            }
+        } */
+        /* function createOrderC(carNumber, parkingId) {
+            	//post请求         
+          		/* alert(code+"shihsihshish");
+             	var da = {"orderNo":"p20160000000016",
+            		   	 "money":"0.61",
+            		  	 "code":code,
+            		     "notify_url":"http://p-share.cn/share/payment/wechat/backpay_10",
+            		     "body":"服装"
+            		  };
+                $.ajax({
+                    type: 'post',
+                   /*  url: '/wx_sharecar/wxpay/getUserInfo?backUri=http://p-share.cn/wx_share/wxpay/towxPay&orderNo=p2016000000001&userId=tes', */
+                  /*  url:'http://p-share.cn/wx_share/wxpay/towxPay',
+                 	dataType:"json",
+                    data:da,
+                    success: function (msg) {
+                        //alert("success:"+msg);
+                 		alert("timeStamp"+msg.timeStamp);
+                 		alert("nonceStr"+msg.nonceStr);
+                 		alert("package"+msg.package);
+                 		alert("signType"+msg.signType);
+                 		alert("sign"+msg.sign);
+                        WeixinJSBridge.invoke(
+                                'getBrandWCPayRequest', {
+                                    "appId": msg.appId,                //公众号名称，由商户传入
+                                    "timeStamp":msg.timeStamp,         //时间戳，自1970年以来的秒数
+                                    "nonceStr" :msg.nonceStr,		   //随机串
+                                    "package" :msg.package,
+                                    "signType" :msg.signType,          //微信签名方式：
+                                    "paySign" : msg.sign               //微信签名
+                                },
+                                function (res) {
+                                    if (res.err_msg == "get_brand_wcpay_request：ok") {
+
+                                    } else if (res.err_msg == "get_brand_wcpay_request：cancel") {
+                                        alert("您已取消支付")
+                                    } else if (res.err_msg == "get_brand_wcpay_request：fail") {
+                                        alert("支付失败")
+                                    }
+                                }
+                        )
+
+                    },
+                    error:function(msg){
+                        alert("error:"+msg);
+                        
+                    }
+                })
+
+           
+        } */
+    </script>
+</head>
+<body>
+<header>
+    <a class="back" href="javascript;"></a>
+
+    <h1 class="zhangdan">临停账单查询</h1>
+</header>
+<button onclick="vorcher()">认证</button>
+<input id="code" type="text">
+<img class="logo21" src="../../images/html5/logo21.png"/>
+<input id="carNumber" class="center" type="text" placeholder="沪A12345">
+
+<p class="explain"><strong>说明：</strong>请输入您要输入的车牌号
+
+<p class="chooseList">您可以选择以下车牌号
+
+<div>
+    <ul class="selectList" id="historyCar"></ul>
+</div>
+<div class="btn_cont">
+    <div class="btn_main">
+        <button class="click" onclick="createOrderC()">查询账单</button>
+    </div>
+</div>
+<hr/>
+<h1 class="fukuandan">您有<span id="orderNum">0</span>张待付款临停账单</h1>
+
+</div>
+
+<hr/>
+<!--<h1 class="fukuandan">您有<span id="orderNum">0</span>张待付款临停账单</h1>-->
+
+<div id="zu"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div class="payNumber">
+	<div class="logo">
+		<img src="../images/payNumber/logo.png" />
+	</div>
+	<div class="title">
+		<img src="../images/payNumber/Written-words.png" />
+	</div>
+	<p class="word">长按识别二维码</p>
+	<div class="qrCode">
+		<img src="../images/payNumber/qrCode.png"/>
+	</div>
+</div>
+<script>
+	$(function(){
+		var oHtml = document.documentElement;
+		getFont();
+		window.onresize = function(){
+			getFont();
+		}
+		function getFont(){
+			var screenWidth = oHtml.clientWidth;
+			oHtml.style.fontSize = 20 * (screenWidth / 320) + 'px';
+			if(screenWidth < 500){
+				oHtml.style.fontSize = 20 * (screenWidth / 320) + 'px';
+//            oHtml.style.fontSize = '62.5%';
+			}else if(screenWidth >= 500){
+				oHtml.style.fontSize = '18.5185px';
+				oHtml.style.width='500px';
+				oHtml.style.margin='0 auto';
+				oHtml.style.backgroundColor="grey";
+			}/*else{
+			 oHtml.style.fontSize = screenWidth/(1080/40)+'px';
+			 }*/
+		}
+	})
+
+</script>

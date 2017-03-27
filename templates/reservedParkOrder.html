@@ -1,0 +1,131 @@
+<div id="reservedParkOrder">
+    <div class="head_desc" ng-bind="sharePriceComment">
+
+    </div>
+    <div class="car_number">
+        车牌号码
+    </div>
+    <div class="shu_ru_car">
+        <input class="cn" name="" placeholder="请输入车牌号码" />
+    </div>
+    <div class="time_cont">
+        <div class="select_time">
+            请选择停车时间
+        </div>
+        <div class="line"></div>
+        <div class="check_time">
+            <div id="wrapper">
+                <div id="scroller">
+                    <ul class="data_ul">
+                        <li ng-repeat="w in weeks" ng-click="checkDate(w.week,$event,w.price)">
+                            <div class="week unselect" ng-bind="w.week"></div>
+                            <div class="date_col unselect" ng-bind="w.date">4.1</div>
+                            <div class="price unselect"><span ng-bind="w.price"></span>元</div>
+                            <div class="riqi unselect"><span ng-bind="w.startTime"></span>-<span ng-bind="w.dayStr"></span><span ng-bind="w.endTime"></span></div>
+                        </li>
+                       <!-- <li>
+                            <div class="week">周六</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>
+                        <li>
+                            <div class="week">周日</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>
+                        <li>
+                            <div class="week">周一</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>
+                        <li>
+                            <div class="week">周二</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>
+                        <li>
+                            <div class="week">周三</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>
+                        <li>
+                            <div class="week">周四</div>
+                            <div class="date_col">4.1</div>
+                            <div class="price">30元</div>
+                            <div class="riqi">18:00-次日8:00</div>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="taocan">
+        <div class="select_time">
+            您还可以选择一下优惠套餐
+        </div>
+        <div class="line"></div>
+        <div ng-show="TCS" class="zw">暂无优惠套餐</div>
+        <div class="tc_main">
+
+            <div ng-repeat="TcDt in TaoCanData">
+                <div class="sel_img">
+                    <img ng-click="checkTc($event,$index+1,TcDt.id,TcDt.price)" src="../images/unselect.png" class="selec_comm">
+                    <input class="tcraio"  type="radio" name="taoc" style="display: none"/>
+                </div>
+                <div class="tac_desc">
+                    <div class="tac_yh">优惠套餐 {{$index+1}}</div>
+                    <div>
+                        <div ng-repeat="tw in TcDt.week ">
+                            <div class="comm pp" ng-bind="tw"></div>
+                            <div class="jia pp">+</div>
+                        </div>
+                       <!-- <div class="comm pp">周五 (晚)</div>
+                        <div class="jia pp">+</div>
+                        <div class="comm pp">周六 (全天)</div>
+                        <div class="jia pp">+</div>
+                        <div class="comm pp">周日 (全天)</div>-->
+                        <div class="jia pp dengyu">=</div>
+                        <div class="tc_price pp"><span ng-bind="TcDt.price"></span>元</div>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+
+
+           <!-- <div class="sel_img">
+                <img ng-click="checkTc($event,'2')" src="../images/unselect.png" class="selec_comm">
+                <input class="tcraio" type="radio" name="taoc" style="display: none"/>
+            </div>
+            <div class="tac_desc">
+
+                <div class="tac_yh">优惠套餐2</div>
+                <div>
+                    <div class="comm pp">周五 (晚)</div>
+                    <div class="jia pp">+</div>
+                    <div class="comm pp">周六 (全天)</div>
+                    <div class="jia pp">=</div>
+                    <div class="tc_price pp">70元</div>
+                </div>
+            </div>
+            <div style="clear: both"></div>-->
+
+        </div>
+    </div>
+
+    <div class="tall_price">
+        <div class="price_desc">优惠停车价格</div>
+        <div class="price_all"><span class="yuan" ng-bind="price"></span>元</div>
+        <div style="clear: both"></div>
+    </div>
+
+   <div class="btn_cmm">
+       <button class="btn" ng-click="queRen()">确认提交</button>
+   </div>
+</div>

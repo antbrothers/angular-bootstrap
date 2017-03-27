@@ -1,0 +1,29 @@
+body{
+    background-color: #eeeeee;
+}
+#red_header{position: relative;
+    /*height:4.6rem;*/
+    width: 100%;
+}
+#red_header .ret_cont{
+	width:1rem;
+    height:1.124rem;
+    position:absolute;
+    top:50%;
+    transform: translateY(50%);
+    left:1.5rem;}
+/*#red_header .ret_cont img{width:1rem;
+height:1.124rem;
+}*/
+#red_header .head_title{font-size: 1.175rem;
+    /*width:6.25rem;*/
+   /* height:1.175rem;*/
+    }
+header .right{
+    color: #FFF;
+    position: absolute;
+    right: 1.5rem;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:1rem;
+    font-weight:bold;}

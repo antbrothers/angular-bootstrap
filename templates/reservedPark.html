@@ -1,0 +1,324 @@
+
+<div id="ParkRes">
+<div id="wrapper">
+    <div id="scroller">
+        <div id="scroller-content">
+            <div class="reservedPark" ng-repeat="parkList in parkData">
+                    <div class="media">
+                        <a class="pull-left" ng-href="#/home/reservedParkOrder?parkingId={{parkList.parkingId}}">
+                            <div ng-if="parkList.parkingPath ==''">
+                                <img class="media-object carImg" src="../images/Base-map_pic.png">
+                            </div>
+                            <div ng-if="parkList.parkingPath !=''">
+                                <img class="media-object carImg" ng-attr-src="{{parkList.parkingPath}}">
+                            </div>
+
+
+                        </a>
+                        <div class="media-body">
+                            <a ng-href="#/home/reservedParkOrder?parkingId={{parkList.parkingId}}">
+                                <h4 class="media-heading"  ng-bind="parkList.parkingName"></h4>
+                                <div class="load">
+                                    <div class="load_img">
+                                        <img src="../images/icon_map.png" class="icon_map">
+                                        <span ng-bind="parkList.parkingAddress"></span>
+                                    </div>
+                                    <div class="load_desc">
+                                        <span ng-bind="parkList.len"></span>
+                                        <img src="../images/item_goto.png" class="goto">
+                                    </div>
+                                </div>
+                                <div style="clear: both"></div>
+                                <div class="infor">
+                                    <div>
+                                        <span ng-bind="parkList.dateStr"></span>
+                                        <span class="price" ng-bind="parkList.price"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+           <!-- <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="reservedPark">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object carImg" src="../images/pic_1.png"
+                             alt="媒体对象">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">昼锦路停车场</h4>
+                        <div class="load">
+                            <div class="load_img">
+                                <img src="../images/icon_map.png" class="icon_map">
+                                <span>昼锦路99号</span>
+                            </div>
+                            <div class="load_desc">
+                                <span>100m</span>
+                                <img src="../images/item_goto.png" class="goto">
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="infor">
+                            <div>
+                                <span>当日18：00一次日8:00</span>
+                                <span class="price">10元</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="reservedPark">
+                <div class="load_more" ng-show="more">
+                    <img ng-attr-src="{{imgSrc}}" class="bg_pic">
+                    <div ng-bind="desc"></div>
+                </div>
+            </div>
+        </div>
+        <div id = "scroller-pullUp" style="display: none">
+            <span id = "up-icon" class = "icon-double-angle-up pull-up-icon"></span>
+            <span id = "pullUp-msg" class = "pull-up-msg">上拉刷新</span>
+        </div>
+    </div>
+</div>
+</div>
+<div class="empty" style="display: block;position: absolute;height: 100%;background: white;width: 100%;left: 0;z-index: 1"></div>
+<!-- 加载高得地图 模块 begin -->
+<div id='mapcontainer'></div>
+<!-- 加载高德地图 模块 end   -->
+
+
+

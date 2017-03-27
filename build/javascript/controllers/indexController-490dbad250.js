@@ -1,0 +1,1 @@
+"use strict";var myControllers=angular.module("indexController",[]);myControllers.controller("Maintrl",["$scope","$stateParams",function(l,o){console.log("Maintrl")}]);

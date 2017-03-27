@@ -1,0 +1,216 @@
+
+#actFour .back{
+    background-image: url('../images/active/4_bgc.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+#actFour{
+    height: 637px;
+}
+#actFour.act .head_desc{
+    width: 100%;
+    text-align: center;
+    margin-top: 55px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#actFour.act .head_desc .head_title{
+    margin-left: 37px;
+}
+#actFour .act_img{
+    text-align: center;
+    margin-left: -54px;
+    margin-top: 52px;
+    margin-top: 34px;
+}
+#actFour .act_img .actTwo_car_one{
+    width: 60%;
+}
+#actFour .act_img .act_two_alert_one_desc{
+    width: 87px;
+    margin-left: 100px;
+    font-size: 12px;
+    padding: 6px;
+    padding-top: 10px;
+    color: white;
+}
+#actFour .act_img .actTwo_p_one{
+    text-align: left;
+    padding-left: 0px;
+}
+#actFour .act_img .actTwo_qi_one{
+    padding-right: 0px;
+}
+#actFour .act_img .act_two_alert_one{
+    background: url(../images/active/2_qipao_1.png);
+    background-size: 84px 77px;
+    -moz-background-size: 63px 100px;
+    background-repeat: no-repeat;
+    height: 100px;
+    background-position-x: 100px;
+    float: right;
+
+    animation:qipaoRightDown 2.5s linear infinite;
+}
+#actFour .act_img .act_two_alert_three{
+    background: url(../images/active/2_qipao_3.png);
+    background-size: 107px 81px;
+    -moz-background-size: 63px 100px;
+    background-repeat: no-repeat;
+    height: 101px;
+    background-position-x: 84px;
+    float:right;
+    animation:qipaoRightDown 2.5s linear infinite;
+}
+#actFour .act_img .act_two_alert_three_desc{
+    width: 117px;
+    margin-left: 78px;
+    font-size: 12px;
+    padding: 6px;
+    padding-top: 20px;
+    color: white;
+}
+#actFour .actTwo_p_two{
+    text-align: right;
+    padding-right: 0px;
+}
+#actFour .actTwo_qi_two{
+    background: url(../images/active/2_qipao_2.png);
+    background-size: 133px 83px;
+    -moz-background-size: 133px 83px;
+    background-repeat: no-repeat;
+    height: 100px;
+    animation:qipaoTwo 2.5s linear infinite;
+}
+#actFour .actTwo_qi_cont{
+    width: 122px;
+}
+#actFour .actTwo_desc_two{
+    font-size: 12px;
+    color: white;
+}
+#actFour .act_img .actTwo_car_two{
+    width: 55%;
+}
+#actFour .act_img .actTwo_car_three{
+    width: 26%;
+    margin-left: 14px;
+    /*animation:fadeInRightThree 2.5s;
+    -webkit-animation: fadeInRightThree 2.5s;
+    -moz-animation: fadeInRightThree 2.5s;
+    -o-animation: fadeInRightThree 2.5s;*/
+}
+#actFour .act_img .actThree_house{
+    margin-left: -107px;
+    width: 230px;
+}
+
+@-webkit-keyframes qipaoRightDown {
+    0% {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+
+    }
+    25%{
+        transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+
+        -webkit-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+    50%{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+    75%{
+        transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -o-transform:rotate(05deg);
+
+        -webkit-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+    100% {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+}
+@-webkit-keyframes qipaoTwo {
+    0% {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:0% 100%;
+        transform-origin:0% 100%;
+
+    }
+    25%{
+        transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+
+
+        -webkit-transform-origin:0% 100%;
+        transform-origin:0% 100%;
+    }
+    50%{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:0% 100%;
+        transform-origin:0% 100%;
+    }
+    75%{
+        transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -o-transform:rotate(05deg);
+
+        -webkit-transform-origin:0% 100%;
+        transform-origin:0% 100%;
+    }
+    100% {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+
+        -webkit-transform-origin:0% 100%;
+        transform-origin:0% 100%;
+    }
+}
+

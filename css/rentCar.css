@@ -1,0 +1,95 @@
+.title1{
+    width:100%;
+    height:2.5rem;
+    line-height: 2.5rem;
+    background-color: #FFF;
+    font-size:1rem;
+    font-weight: bold;
+    border-left: 0.5rem solid #39d5b8;
+    text-indent: 2rem;
+    border-top:solid 1px #bfbfbf;
+}
+.chooseCarType{
+    width: 100%;
+    background-color: #FFF;
+    padding:0.5rem 0.5rem;
+    margin-bottom: 0.6rem;
+    border-top:solid 1px #bfbfbf;
+    border-bottom:solid 1px #bfbfbf;
+}
+.chooseCarType p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.chooseCarType ul.carType{
+    overflow: hidden;
+    zoom: 1;
+   }
+.chooseCarType ul.carType li{
+    width:33%;
+    /*height:14rem;*/
+    border: solid 1px #bfbfbf;
+    float: left;
+    border-top:solid 2px #000000;
+    text-align: center;
+    padding-bottom: 0.5rem;
+
+}
+.chooseCarType ul.carType li:nth-child(2){
+    margin:0 0.5%;
+}
+.chooseCarType ul.carType li img{
+    width: 100%;
+    height:7.5rem;}
+.chooseCarType ul.carType li h1{
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.chooseCarType ul.carType li h2{
+    font-size: 0.75rem;
+    color:#696969;
+    line-height: 2rem;
+}
+.chooseCarType ul.carType li .call{
+    width: 80%;
+    height: 2rem;
+    line-height: 2rem;
+    background-color:#39d5b8;
+    color: #FFF;
+    font-size: 1rem;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+}
+.chooseCarType .timeCar{
+    width: 100%;
+    padding:1rem 0;
+    border-top:solid 1px #bfbfbf;
+    border-bottom:solid 1px #bfbfbf;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 1rem;
+}
+.chooseCarType .timeCar img{
+    width: 5.25rem;
+    border-left: solid 2px #000000;
+}
+.chooseCarType .timeCar h3{
+    display: inline-block;
+    font-size: 1rem;
+}
+.chooseCarType .timeCar .orderSelf{
+    width: 6rem;
+    height:2rem;
+    color: #FFF;
+    line-height: 2rem;
+    display: inline-block;
+    float: right;
+    background-color: #39d5b8;
+    text-align: center;
+    border-radius: 0.3rem;
+    top: 50%;
+    transform: translateY(50%);
+    font-size: 1rem;
+}
